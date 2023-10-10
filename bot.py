@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import discord.ext.commands.errors as discord_errors
 
-# Hot-Reload
+# Hot-Reload ext.
 import importlib
 import sys
 
