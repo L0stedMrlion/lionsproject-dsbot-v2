@@ -1,8 +1,26 @@
 # 🦁 Lion's Project - Discord bot
 
-Another project bot. WIP
+Discord for my project named Lion's Project. This bot is for basic utility this like **/clear** and these this. U can download my project!
 
-## 📋 Notes
+## 💾 Download
+Make sure you have git installed
+
+**Ubuntu/Debian:**
+
+`sudo apt update`
+
+`sudo apt install git`
+
+**CentOS/Fedora:**
+
+`sudo yum install git`
+
+**Download this bot**
+
+`git clone https://github.com/L0stedMrlion/lionsproject-dsbot`
+
+
+## 📋 Extensions
 
 `pip install discord.py` - ds.py
 
