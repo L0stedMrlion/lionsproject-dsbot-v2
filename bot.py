@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     while True:
         try:
-            bot.run('YOUR_BOT_TOKEN')
+            bot.run('TOKEN_GITHUB')
         except discord_errors.LoginFailure:
             print("Invalid bot token. Please check your token.")
             sys.exit(1)
