@@ -6,7 +6,7 @@ import discord.ext.commands.errors as discord_errors
 import importlib
 import sys
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
