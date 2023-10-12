@@ -11,10 +11,6 @@ Make sure you have git installed, if you dont have use commands below
 
 `sudo apt install git`
 
-**CentOS/Fedora:**
-
-`sudo yum install git`
-
 **Download this bot**
 
 `git clone https://github.com/L0stedMrlion/lionsproject-dsbot`
