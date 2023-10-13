@@ -1,6 +1,6 @@
 # 🦁 Lion's Project - Discord bot
 
-Discord for my project named Lion's Project. This bot is for basic utility this like **/clear** and these this. U can download my project!
+Discord bot for our project named 🦁 Lion's Project, bot is writen in **discord.js**
 
 ## 💾 Download
 Make sure you have git installed, if you dont have use commands below
@@ -15,9 +15,12 @@ Make sure you have git installed, if you dont have use commands below
 
 `git clone https://github.com/L0stedMrlion/lionsproject-dsbot`
 
-
 ## 📋 Extensions
 
-`pip install discord.py` - discord.py
+`npm install discord.js` 
 
-`pip install discord.py-reload` - reload discord.py
+`yarn add discord.js`
+
+`pnpm add discord.js`
+
+`bun add discord.js`
