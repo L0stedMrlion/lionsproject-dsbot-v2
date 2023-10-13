@@ -19,4 +19,7 @@ Make sure you have git installed, if you dont have use commands below.
 
 ## 📋 Extensions
 
-`npm install discord.js` 
+`npm install discord.js` - discord.js
+
+`npm install dotenv` - dotenv
+
