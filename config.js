@@ -1,5 +1,5 @@
 module.exports = {
-    token: "Token :/",
-    prefix: "/",
-    ownerID: "710549603216261141" // Mrlion
+    token: "process.env.DISCORD_TOKEN",
+    prefix: "process.env.PREFIX",
+    ownerID: "process.env.OWNER_ID" // Mrlion (710549603216261141)
 };
