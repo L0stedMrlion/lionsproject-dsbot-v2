@@ -3,11 +3,15 @@ const config = require("./config.js");
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 
-let expectedNumber = 1;
-const reactionEmoji = "👍";
+const COUNTING_CHANNEL = "process.env.COUNTING_CHANNEL"; 
 
-client.on("messageCreate", (message) => {
-    if (message.author.bot) return;
+let expectedNumber = 1; 
+const reactionEmoji = "👍"
+
+client.on("messageCreate", async (message) => {
+    if (message.author.bot) return; 
+
+    if (message.channel.id !== COUNTING_CHANNEL) return; 
 
     const content = message.content;
 
