@@ -1,3 +1,7 @@
+const dotenv = require(dotenv);
+
+dotenv.config({ path: `${process.cwd()}/.${process.env.NODE_ENV.replace(' ', '')}.env`});
+
 module.exports = {
     token: "process.env.DISCORD_TOKEN",
     prefix: "process.env.PREFIX",
