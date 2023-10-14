@@ -2,7 +2,7 @@
 
 Discord bot for our project named 🦁 Lion's Project, hosted on VPS on **Ubuntu 22.04**, writen in **Discord.js** 
 
-Did you se some issue or some idea? [Report it!](https://github.com/L0stedMrlion/lionsproject-dsbot/issues)
+Did you se some issue or some idea? You can create a bug or feature request [here](https://github.com/L0stedMrlion/lionsproject-dsbot/issues)!
 ## 💾 Download
 Make sure you have git installed, if you dont have use commands below. 
 
@@ -29,4 +29,4 @@ Do you have some idea to add to our bot? Create [Feature Request!]([https://gith
 
 `reload` - Only can be used in console, reloads whole bot
 
-`/purge` - Bulk delete all message in channel, integrated command in Discord API
+`/purge` - Bulk delete all message in channel
