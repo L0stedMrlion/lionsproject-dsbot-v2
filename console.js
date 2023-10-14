@@ -1,26 +1,18 @@
 const fs = require('fs');
+const currentDate = new Date();
+const formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+const formattedTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
+const logFileName = `logs/${formattedDate}_${formattedTime}.log`;
 
-// Nastavení logovacího souboru
-const logFile = "logs/startuplog.log";
-
-console.log("==================================");
-console.log("   Discord Bot Initialization   ");
-console.log("==================================");
-
-// Funkce pro logování zpráv do souboru
 function logToConsoleAndFile(message) {
-    // Výpis zprávy do konzole
     console.log(message);
-
-    // Zápis zprávy do logovacího souboru
-    fs.appendFile(logFile, message + "\n", (err) => {
+    fs.appendFile(logFileName, message + "\n", (err) => {
         if (err) {
             console.error("Chyba při zápisu do logu:", err);
         }
     });
 }
 
-console.log("Loading files and modules...");
 logToConsoleAndFile("Loading files and modules...");
 
 function loadFilesFromDirectory(directoryPath) {
@@ -52,16 +44,12 @@ function loadFilesFromDirectory(directoryPath) {
     });
 }
 
-console.log("Loading commands from 'commands' directory...");
 logToConsoleAndFile("Loading commands from 'commands' directory...");
 loadFilesFromDirectory('./commands');
 
-console.log("Loading modules from 'modules' directory...");
 logToConsoleAndFile("Loading modules from 'modules' directory...");
 loadFilesFromDirectory('./modules');
 
-console.log("Additional initialization...");
 logToConsoleAndFile("Additional initialization...");
 
-console.log("Initialization completed.");
 logToConsoleAndFile("Initialization completed.");
