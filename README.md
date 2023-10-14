@@ -17,7 +17,7 @@ Make sure you have git installed, if you dont have use commands below.
 
 `git clone https://github.com/L0stedMrlion/lionsproject-dsbot`
 
-## 📋 Extensions
+## 📋 Extensions (Ubuntu)
 
 `npm install discord.js` - discord.js
 
