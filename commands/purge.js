@@ -16,13 +16,9 @@ client.on("messageCreate", async (message) => {
 
         const channel = message.channel;
 
-        // Získejte všechny zprávy v kanálu
         const messages = await channel.messages.fetch();
-
-        // Smazání zpráv
         channel.bulkDelete(messages, true);
 
-        // Vytvoření zprávy o úspěšném smazání
         const successMessage = await message.reply(":white_check_mark: Všechny zprávy byly úspěšně smazány.");
     }
 });
