@@ -24,6 +24,12 @@ Make sure you have git installed, if you dont have use commands below.
 
 `npm install dotenv` - dotenv
 
+## 💼 Modules
+
+`Counting Module` - Working counting module, variable in .dev.env, regular counting, math like 1+1 is not working :(
+
+`Music` - Planned
+
 ## 📝 List of commands 
 Do you have some idea to add to our bot? Create [Feature Request!]([https://github.com/L0stedMrlion/lionsproject-dsbot/issues](https://github.com/L0stedMrlion/lionsproject-dsbot/issues/new?assignees=L0stedMrlion&labels=enhancement%2C+waiting+for+answer&projects=&template=%E2%8C%A8%EF%B8%8F-feature-request.md&title=)https://github.com/L0stedMrlion/lionsproject-dsbot/issues/new?assignees=L0stedMrlion&labels=enhancement%2C+waiting+for+answer&projects=&template=%E2%8C%A8%EF%B8%8F-feature-request.md&title=)
 
