@@ -42,3 +42,4 @@ loadFilesInDirectory(modulesDirectoryPath);
 require('./status.js');
 require('./reload.js');
 require('./console.js');
+require('./logs.js');
