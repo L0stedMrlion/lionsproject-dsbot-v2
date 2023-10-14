@@ -2,6 +2,7 @@
 
 Discord bot for our project named 🦁 Lion's Project, hosted on VPS on **Ubuntu 22.04**, writen in **Discord.js** 
 
+Did you se some issue? [Report it!](https://github.com/L0stedMrlion/lionsproject-dsbot/issues)
 ## 💾 Download
 Make sure you have git installed, if you dont have use commands below. 
 
@@ -17,7 +18,7 @@ Make sure you have git installed, if you dont have use commands below.
 
 `git clone https://github.com/L0stedMrlion/lionsproject-dsbot`
 
-## 📋 Extensions (Ubuntu)
+## 📋 Extensions
 
 `npm install discord.js` - discord.js
 
