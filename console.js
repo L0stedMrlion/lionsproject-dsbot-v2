@@ -1,4 +1,3 @@
-// load.js
 const fs = require('fs');
 
 console.log("==================================");
@@ -17,7 +16,7 @@ function loadFilesFromDirectory(directoryPath) {
         files.forEach((file) => {
             const filePath = `${directoryPath}/${file}`;
             try {
-                require(filePath); // Načte a spustí soubor
+                require(filePath);
                 console.log(`Loaded and executed file: ${file}`);
             } catch (e) {
                 console.error(`Error loading and executing file ${file}: ${e}`);
@@ -28,11 +27,9 @@ function loadFilesFromDirectory(directoryPath) {
     });
 }
 
-// Load files from the 'commands' directory
 console.log("Loading commands from 'commands' directory...");
 loadFilesFromDirectory('./commands');
 
-// Load files from the 'modules' directory
 console.log("Loading modules from 'modules' directory...");
 loadFilesFromDirectory('./modules');
 
