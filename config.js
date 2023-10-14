@@ -10,12 +10,34 @@ module.exports = {
     ownerID: process.env.OWNER_ID,
 };
 
+function loadFilesInDirectory(directoryPath) {
+    fs.readdir(directoryPath, (err, files) => {
+        if (err) {
+            console.error('Chyba při čtení adresáře:', err);
+            return;
+        }
+
+        for (const file of files) {
+            const filePath = path.join(directoryPath, file);
+
+            if (file.endsWith('.js')) {
+                try {
+                    require(filePath); 
+                    console.log(`Soubor ${file} byl úspěšně načten a spuštěn.`);
+                } catch (e) {
+                    console.error(`Chyba při načítání a spouštění souboru ${file}:`, e);
+                }
+            }
+        }
+    });
+}
+
+const commandsDirectoryPath = './commands';
+loadFilesInDirectory(commandsDirectoryPath);
+
+const modulesDirectoryPath = './modules';
+loadFilesInDirectory(modulesDirectoryPath);
+
 // System
 require('./status.js');
 require('./reload.js');
-
-// Commands 
-require('./commands/purge.js');
-
-// Modules
-require('./modules/counting.js');
