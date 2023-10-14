@@ -6,7 +6,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 const COUNTING_CHANNEL = "process.env.COUNTING_CHANNEL"; 
 
 let expectedNumber = 1; 
-const reactionEmoji = "👍"
+const reactionEmoji = "process.env.COUNTING_REACTION"
 
 client.on("messageCreate", async (message) => {
     if (message.author.bot) return; 
