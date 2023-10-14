@@ -16,7 +16,10 @@ function deleteOldLogs() {
             console.log(`Deleted old log file: ${logFile}`);
         }
     });
+
+    console.log('Logs older than 7 days have been deleted.');
 }
 
-setInterval(deleteOldLogs, 24 * 60 * 60 * 1000); 
+setInterval(deleteOldLogs, 24 * 60 * 60 * 1000);
+
 deleteOldLogs();
