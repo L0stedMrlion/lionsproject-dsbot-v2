@@ -8,7 +8,6 @@ async function reloadBot() {
 
     const mainBot = require("./config.js"); 
 
-    // Vytvoříme novou instanci bota
     const newClient = new mainBot.Client();
 
     newClient.login(config.token);
