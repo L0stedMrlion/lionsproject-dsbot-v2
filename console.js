@@ -17,7 +17,9 @@ console.log = function(message) {
 };
 
 // Console log
+console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
 console.log(" Lion's Project™ - Discord bot ", process.env.DSBOTVERSION)
+console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ")
 setTimeout(() => {
     console.log(" Lion's Project™ - Loading...");
 }, 3000);
