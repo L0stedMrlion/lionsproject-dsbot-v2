@@ -13,7 +13,6 @@ function deleteOldLogs() {
 
         if (daysAgo > 7) {
             fs.unlinkSync(logPath);
-            console.log(`Deleted old log file: ${logFile}`);
         }
     });
 
