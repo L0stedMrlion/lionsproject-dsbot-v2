@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-require("dotenv").config();
+const dotenv = require('dotenv');
 const client = new Discord.Client();
 const countingChannelName = process.env.COUNTING_CHANNEL;
 const countingNumbers = new Map();
