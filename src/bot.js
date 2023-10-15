@@ -3,8 +3,8 @@ const { Client, Events, GatewayIntentBits, ActivityType, GuildInviteManager } = 
 
 const client = new Client({
     intents: [
-		GatewayIntentBits.Guilds,
-		GatewayIntentBits.GuildMembers,
+	GatewayIntentBits.Guilds,
+	GatewayIntentBits.GuildMembers,
         GatewayIntentBits.GuildModeration,
         GatewayIntentBits.GuildEmojisAndStickers,
         GatewayIntentBits.GuildIntegrations,
