@@ -1,16 +1,17 @@
 {
-  "name": "projectdsbot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/bot.js",
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  },
+  "name": "lionsprojectdsbot",
+  "version": "RELEASE 1.0",
+  "main": "src/index.js",
   "scripts": {
     "test": "node ."
   },
   "keywords": [],
   "author": "Mrlion",
   "license": "ISC",
-  "dependencies": {
-    "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1"
-  }
+  "description": ""
 }
