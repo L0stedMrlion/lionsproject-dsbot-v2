@@ -37,7 +37,7 @@ client.once(Events.ClientReady, (c) => {
 });
 
 client.on("ready", () => {
-  console.log(" Lion's Project™ - Loading...");
+  console.log(" Lion's Project™ - Loading... ");
   console.log(" Lion's Project™ - Loaded! ");
   console.log(" Lion's Project™ - Bot have been successfully enabled! ");
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
