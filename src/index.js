@@ -1,7 +1,6 @@
 require("dotenv").config();
 const { Client, Events, GatewayIntentBits, ActivityType } = require("discord.js");
 
-eventHandler(client);
 const client = new Client({
   intents: [
     // Guilds
