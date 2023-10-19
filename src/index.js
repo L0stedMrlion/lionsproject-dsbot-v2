@@ -1,6 +1,7 @@
 require("dotenv").config();
 const { Client, Events, GatewayIntentBits, ActivityType } = require("discord.js");
 
+eventHandler(client);
 const client = new Client({
   intents: [
     // Guilds
@@ -39,7 +40,7 @@ client.once(Events.ClientReady, (c) => {
 client.on("ready", () => {
   console.log(" Lion's Project™ - Loading... ");
   console.log(" Lion's Project™ - Loaded! ");
-  console.log(" Lion's Project™ - Bot have been successfully enabled! ");
+  console.log(" Lion's Project™ - Bot have been successfully enabled :)! ");
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Watching });
 });
