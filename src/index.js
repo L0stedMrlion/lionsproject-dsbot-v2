@@ -50,22 +50,8 @@ client.on('interactionCreate', async interaction => {
 
   if (interaction.commandName === 'purge') {
     const channel = interaction.channel;
-
-
-    const numberOfMessages = interaction.options.options.first ? interaction.options.options.first : Infinity;
-
-    if (numberOfMessages < 1) {
-      await interaction.reply('Please specify a number of messages to delete greater than 0.');
-      return;
-    }
-
-    const messages = await channel.messages.fetch({
-      limit: numberOfMessages,
-    });
-
-    await messages.delete();
-
-    await interaction.reply(`${numberOfMessages} messages in this channel have been deleted.`);
+    channel.bulkDelete(100)
+    interaction.reply(":broom: Zprávy byly promazány!")
   }
 });
 
