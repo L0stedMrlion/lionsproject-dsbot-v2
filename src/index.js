@@ -45,27 +45,26 @@ client.on("ready", () => {
 });
 
 // Commands 
-
-client.on("interactionCreate", (interaction) => {
+client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (commandName === 'purge') {
-    const amount = options.getInteger('amount');
+  if (interaction.commandName === 'purge') {
+    // Get the channel where the command was run.
+    const channel = interaction.channel;
 
-    if (amount >= 2 && amount <= 100) { // Check if the amount is within the allowed range
-      interaction.channel.messages
-        .fetch({ limit: amount })
-        .then((messages) => {
-          interaction.channel.bulkDelete(messages)
-            .then((deletedMessages) => {
-              console.log(`Bulk deleted ${deletedMessages.size} messages`);
-            })
-            .catch(console.error);
-        })
-        .catch(console.error);
-    } else {
-      interaction.reply('You can only delete between 2 and 100 messages at a time.');
-    }
+    // Get the number of messages to delete.
+    const numberOfMessages = interaction.options.options.first ? interaction.options.options.first : Infinity;
+
+    // Fetch all of the messages in the channel.
+    const messages = await channel.messages.fetch({
+      limit: numberOfMessages,
+    });
+
+    // Delete all of the messages.
+    await messages.delete();
+
+    // Reply to the user to let them know that the messages have been deleted.
+    await interaction.reply(`${numberOfMessages} messages in this channel have been deleted.`);
   }
 });
 
