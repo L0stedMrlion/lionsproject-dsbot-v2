@@ -49,21 +49,22 @@ client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'purge') {
-    // Get the channel where the command was run.
     const channel = interaction.channel;
 
-    // Get the number of messages to delete.
+
     const numberOfMessages = interaction.options.options.first ? interaction.options.options.first : Infinity;
 
-    // Fetch all of the messages in the channel.
+    if (numberOfMessages < 1) {
+      await interaction.reply('Please specify a number of messages to delete greater than 0.');
+      return;
+    }
+
     const messages = await channel.messages.fetch({
       limit: numberOfMessages,
     });
 
-    // Delete all of the messages.
     await messages.delete();
 
-    // Reply to the user to let them know that the messages have been deleted.
     await interaction.reply(`${numberOfMessages} messages in this channel have been deleted.`);
   }
 });
