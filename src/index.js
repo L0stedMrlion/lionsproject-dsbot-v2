@@ -39,9 +39,34 @@ client.once(Events.ClientReady, (c) => {
 client.on("ready", () => {
   console.log(" Lion's Project™ - Loading... ");
   console.log(" Lion's Project™ - Loaded! ");
-  console.log(" Lion's Project™ - Bot have been successfully enabled :)! ");
+  console.log(" Lion's Project™ - Bot have been successfully enabled! ");
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Watching });
+});
+
+// Commands 
+
+client.on("interactionCreate", (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (commandName === 'purge') {
+    const amount = options.getInteger('amount');
+
+    if (amount >= 2 && amount <= 100) { // Check if the amount is within the allowed range
+      interaction.channel.messages
+        .fetch({ limit: amount })
+        .then((messages) => {
+          interaction.channel.bulkDelete(messages)
+            .then((deletedMessages) => {
+              console.log(`Bulk deleted ${deletedMessages.size} messages`);
+            })
+            .catch(console.error);
+        })
+        .catch(console.error);
+    } else {
+      interaction.reply('You can only delete between 2 and 100 messages at a time.');
+    }
+  }
 });
 
 // Token
