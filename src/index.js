@@ -44,5 +44,10 @@ client.on("ready", () => {
   client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Watching });
 });
 
+// Command Handler
+client.on('interactionCreate', async interaction => {
+  if (!interaction.isChatInputCommand()) return;
+});
+
 // Token
 client.login(process.env.TOKEN);
