@@ -32,7 +32,7 @@ const client = new Client({
 // Console & Status
 client.once(Events.ClientReady, (c) => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-  console.log(" 🦁 Lion's Project™ - Discord bot", process.env.VERSION);
+  console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
 });
 
