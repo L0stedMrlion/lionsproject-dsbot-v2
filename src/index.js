@@ -1,5 +1,10 @@
 require("dotenv").config();
+const fs = require('fs');
+const path = require('path');
+
 const { Client, Events, GatewayIntentBits, ActivityType, Collection } = require("discord.js");
+
+require('./commands/purge.js');
 
 const client = new Client({
   intents: [
@@ -42,12 +47,6 @@ client.on("ready", () => {
   console.log(" Lion's Project™ - Bot have been successfully enabled! ");
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Watching });
-});
-
-// Command Handler
-
-client.on('interactionCreate', async interaction => {
-  if (!interaction.isChatInputCommand()) return;
 });
 
 // Token
