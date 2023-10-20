@@ -1,7 +1,5 @@
 require("dotenv").config();
-const fs = require('fs');
-const path = require("path")
-const { Client, Events, GatewayIntentBits, ActivityType } = require("discord.js");
+const { Client, Events, GatewayIntentBits, ActivityType, Collection } = require("discord.js");
 
 const client = new Client({
   intents: [
@@ -45,14 +43,6 @@ client.on("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Watching });
 });
-
-// File Loader
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
-for (const file of commandFiles) {
-    const command = require(`src/commands/${file}`);
-    client.commands.set(command.name, command);
-}
 
 // Token
 client.login(process.env.TOKEN);
