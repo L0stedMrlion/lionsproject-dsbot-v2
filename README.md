@@ -6,8 +6,6 @@ Did you se some issue or some idea? You can create a bug or feature request [her
 
 ## 💾 Download
 
-**Ubuntu**
-
 `sudo apt update`
 
 `sudo apt install git`
