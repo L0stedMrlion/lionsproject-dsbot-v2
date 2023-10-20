@@ -1,13 +1,12 @@
 # 🦁 Lion's Project - Discord bot
 
-Discord bot for our project named 🦁 Lion's Project, hosted on VPS on **Ubuntu 22.04**, writen in **Discord.js** 
+Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.
 
 Did you se some issue or some idea? You can create a bug or feature request [here](https://github.com/L0stedMrlion/lionsproject-dsbot/issues)!
 
 ## 💾 Download
-Download commands for Ubuntu!
 
-**Ubuntu/Debian:**
+**Ubuntu**
 
 `sudo apt update`
 
