@@ -5,7 +5,6 @@ config();
 
 const client = new Client({
   intents: [
-    // Guilds
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildEmojisAndStickers,
     GatewayIntentBits.GuildIntegrations,
@@ -19,13 +18,10 @@ const client = new Client({
     GatewayIntentBits.GuildScheduledEvents,
     GatewayIntentBits.GuildVoiceStates,
     GatewayIntentBits.GuildWebhooks,
-    // DirectMessage
     GatewayIntentBits.DirectMessageReactions,
     GatewayIntentBits.DirectMessageTyping,
     GatewayIntentBits.DirectMessages,
-    // Message
     GatewayIntentBits.MessageContent,
-    // Moderation
     GatewayIntentBits.AutoModerationConfiguration,
     GatewayIntentBits.AutoModerationExecution,
   ],
