@@ -1,5 +1,8 @@
-require("dotenv").config();
-const { Client, Events, GatewayIntentBits, ActivityType, Collection } = require("discord.js");
+import { config } from "dotenv";
+import { Client, GatewayIntentBits, ActivityType } from "discord.js";
+
+config();
+
 const client = new Client({
   intents: [
     // Guilds
@@ -28,43 +31,20 @@ const client = new Client({
   ],
 });
 
-// Console & Status
-client.once(Events.ClientReady, (c) => {
+client.once("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
 });
 
 client.on("ready", () => {
-  console.log(" Lion's Project™ - Loading... ");
-  console.log(" Lion's Project™ - Loaded! ");
-  console.log(" Lion's Project™ - Bot have been successfully enabled! ");
-  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-  client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Watching });
-});
-
-// Command Listener
-client.on('interactionCreate', async interaction => {
-  if (!interaction.isChatInputCommand()) return;
-
-  if (interaction.commandName === 'purge') {
-    const channel = interaction.channel;
-
-    interaction.deferReply();
-
-    try {
-      await channel.bulkDelete(100);
-
-      interaction.editReply(":broom: Zprávy byly promazány");
-    } catch (error) {
-      if (error.message.includes("You can only bulk delete messages that are under 14 days old")) {
-        interaction.editReply(":warning: Můžete hromadně mazat pouze zprávy, které jsou staré méně než 14 dní.");
-      } else {
-        interaction.editReply(":x: Při mazání zpráv došlo k chybě.");
-      }
-    }
+  if (client.user) {
+    console.log(" Lion's Project™ - Loading... ");
+    console.log(" Lion's Project™ - Loaded! ");
+    console.log(" Lion's Project™ - Bot have been successfully enabled! ");
+    console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+    client.user.setActivity("🦁 Lion's Project", { type: ActivityType.Listening });
   }
 });
 
-// Token
 client.login(process.env.TOKEN);
