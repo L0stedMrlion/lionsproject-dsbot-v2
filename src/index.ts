@@ -1,11 +1,5 @@
 require("dotenv").config();
-const fs = require('fs');
-const path = require('path');
-
 const { Client, Events, GatewayIntentBits, ActivityType, Collection } = require("discord.js");
-
-require('./commands/purge.js');
-
 const client = new Client({
   intents: [
     // Guilds
@@ -53,11 +47,23 @@ client.on("ready", () => {
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-if (interaction.commandName === 'purge') {
-  const channel = interaction.channel;
-  channel.bulkDelete(100)
-  interaction.reply(":broom: Zprávy byly promazány, fetchreply: true")
-}
+  if (interaction.commandName === 'purge') {
+    const channel = interaction.channel;
+
+    interaction.deferReply();
+
+    try {
+      await channel.bulkDelete(100);
+
+      interaction.editReply(":broom: Zprávy byly promazány");
+    } catch (error) {
+      if (error.message.includes("You can only bulk delete messages that are under 14 days old")) {
+        interaction.editReply(":warning: Můžete hromadně mazat pouze zprávy, které jsou staré méně než 14 dní.");
+      } else {
+        interaction.editReply(":x: Při mazání zpráv došlo k chybě.");
+      }
+    }
+  }
 });
 
 // Token
