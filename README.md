@@ -15,3 +15,7 @@ Did you se some issue or some idea? You can create a bug or feature request [her
 `npm install discord.js` - discord.js
 
 `npm install dotenv` - dotenv
+
+`npm install typescript` - TypeScript
+
+`npm install tsx types@node` - tsx
