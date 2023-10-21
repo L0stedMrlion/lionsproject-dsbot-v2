@@ -6,12 +6,18 @@
   },
   "name": "lionsprojectdsbot",
   "version": "RELEASE 1.0",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node ."
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node ."
   },
   "keywords": [],
   "author": "Mrlion",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "tsx": "^3.14.0"
+  }
 }
