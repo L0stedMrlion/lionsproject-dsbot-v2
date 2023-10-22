@@ -1,6 +1,5 @@
 import { config } from "dotenv";
 import { Client, GatewayIntentBits, ActivityType, Collection, Events } from "discord.js";
-import  mongoose from "mongoose";
 config();
 
 const client = new Client({
