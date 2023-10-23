@@ -3,7 +3,7 @@
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1"
   },
-  "name": "lionsproject_dsbot",
+  "name": "lionsproject-dsbot",
   "version": "RELEASE 1.0",
   "main": "dist/index.js",
   "scripts": {
