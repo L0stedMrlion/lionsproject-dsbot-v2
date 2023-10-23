@@ -7,7 +7,7 @@
   "version": "RELEASE 1.0",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch build/index.ts",
     "build": "tsc",
     "start": "node ."
   },
