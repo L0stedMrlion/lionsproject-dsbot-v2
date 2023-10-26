@@ -5,7 +5,7 @@
   },
   "name": "lionsproject-dsbot",
   "version": "RELEASE 1.0",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "dev": "tsx watch build/index.ts",
     "build": "tsc",
