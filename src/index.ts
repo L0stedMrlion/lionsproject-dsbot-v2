@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-import { Client, GatewayIntentBits, ActivityType, Events } from "discord.js";
+import { Client, GatewayIntentBits, ActivityType, Collection, Events } from "discord.js";
 config();
 
 const client = new Client({
@@ -40,6 +40,19 @@ client.on("ready", () => {
     client.user.setActivity("🦁 Lion's Project", {
       type: ActivityType.Listening,
     });
+  }
+});
+
+client.on("interactionCreate", (interaction: Interaction) => {
+  if (!interaction.isChatInputCommand()) {
+    return;
+  }
+
+  switch (interaction.commandName) {
+    case "hey":
+      return interaction.reply("hey!");
+    case "ping":
+      return interaction.reply("Pong!");
   }
 });
 
