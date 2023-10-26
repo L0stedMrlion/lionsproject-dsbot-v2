@@ -1,22 +1,22 @@
-require('dotenv').config();
-import { REST, Routes } from 'discord.js';
+require("dotenv").config();
+import { REST, Routes } from "discord.js";
 
 const commands = [
   {
-    name: 'hey',
-    description: 'Replies with hey!',
+    name: "hey",
+    description: "Replies with hey!",
   },
   {
-    name: 'ping',
-    description: 'Pong!',
+    name: "ping",
+    description: "Pong!",
   },
 ];
 
-const rest = new REST({ version: '10' }).setToken("process.env.TOKEN");
+const rest = new REST({ version: "10" }).setToken("process.env.TOKEN");
 
 (async () => {
   try {
-    console.log('Registering slash commands...');
+    console.log("Registering slash commands...");
 
     await rest.put(
       Routes.applicationGuildCommands(
@@ -26,7 +26,7 @@ const rest = new REST({ version: '10' }).setToken("process.env.TOKEN");
       { body: commands }
     );
 
-    console.log('Slash commands were registered successfully!');
+    console.log("Slash commands were registered successfully!");
   } catch (error) {
     console.log(`There was an error: ${error}`);
   }

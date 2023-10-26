@@ -1,5 +1,11 @@
 import { config } from "dotenv";
-import { Client, GatewayIntentBits, ActivityType, Collection, Events } from "discord.js";
+import {
+  Client,
+  GatewayIntentBits,
+  ActivityType,
+  Collection,
+  Events,
+} from "discord.js";
 config();
 
 const client = new Client({
