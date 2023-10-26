@@ -1,22 +1,16 @@
 {
-  "dependencies": {
-    "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1"
-  },
-  "name": "lionsproject-dsbot",
-  "version": "RELEASE 1.0",
-  "main": "build/index.js",
+  "name": "lionsproject-discordbot",
+  "version": "RELEASE",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "tsx watch build/index.ts",
-    "build": "tsc",
-    "start": "node ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Mrlion",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@types/node": "^20.8.7",
-    "tsx": "^3.14.0"
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1"
   }
 }
