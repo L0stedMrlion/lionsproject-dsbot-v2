@@ -18,4 +18,4 @@ Did you se some issue or some idea? You can create a bug or feature request [her
 
 `npm install typescript` - TypeScript
 
-`npm install tsx types@node` - tsx
+`npm install tsx types@node` - TSX
