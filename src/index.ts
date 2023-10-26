@@ -43,17 +43,4 @@ client.on("ready", () => {
   }
 });
 
-client.on("interactionCreate", (interaction: Interaction) => {
-  if (!interaction.isChatInputCommand()) {
-    return;
-  }
-
-  switch (interaction.commandName) {
-    case "hey":
-      return interaction.reply("hey!");
-    case "ping":
-      return interaction.reply("Pong!");
-  }
-});
-
 client.login(process.env.TOKEN);
