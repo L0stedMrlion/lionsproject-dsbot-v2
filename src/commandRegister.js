@@ -1,10 +1,10 @@
-equire('dotenv').config();
+require('dotenv').config();
 const { REST, Routes } = require('discord.js');
 
 const commands = [
   {
     name: 'info',
-    description: '🤖 Information about LionBot',
+    description: 'Replies with hey!',
   },
 ];
 
