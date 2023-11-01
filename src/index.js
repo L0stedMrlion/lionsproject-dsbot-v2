@@ -40,23 +40,4 @@ client.on("ready", () => {
   }
 });
 
-
-client.on('interactionCreate', async (interaction) => {
-  if (!interaction.isChatInputCommand()) return;
-
-  if (interaction.commandName === 'info') {
-    const embed = new EmbedBuilder()
-      .setTitle('Discord.js Bot Information')
-      .setColor(0x00FFFF)
-      .setAuthor({ name: interaction.user.tag, iconURL: interaction.user.displayAvatarURL() })
-      .addField('Bot Name', client.user.username, true)
-      .addField('Bot ID', client.user.id, true)
-      .addField('Guilds', client.guilds.cache.size, true)
-      .addField('Users', client.users.cache.size, true)
-      .addField('Uptime', process.uptime(), true)
-
-    await interaction.reply({ embeds: [embed] });
-  }
-});
-
 client.login(process.env.TOKEN);
