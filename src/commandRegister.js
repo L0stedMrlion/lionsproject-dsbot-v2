@@ -3,8 +3,8 @@ const { REST, Routes } = require('discord.js');
 
 const commands = [
   {
-    name: 'purge',
-    description: '🧹 Deletes all messages not older than 14 days',
+    name: 'info',
+    description: '🤖 Information about LionBot',
   },
 ];
 

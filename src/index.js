@@ -40,20 +40,4 @@ client.on("ready", () => {
   }
 });
 
-client.on('interactionCreate', (interaction) => {
-  if (!interaction.isChatInputCommand()) return;
-
-  if (interaction.commandName === 'purge') {
-    // Bulk delete 100 messages.
-    try {
-      interaction.channel.bulkDelete(100);
-    } catch (error) {
-      // Don't log the error to the console.
-    }
-
-    // Reply to the user to let them know that the messages have been deleted.
-    interaction.reply('🧹 Messages in this channel were deleted!');
-  }
-});
-
 client.login(process.env.TOKEN);
