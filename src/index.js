@@ -54,7 +54,6 @@ client.on('interactionCreate', async (interaction) => {
       .addField('Guilds', client.guilds.cache.size, true)
       .addField('Users', client.users.cache.size, true)
       .addField('Uptime', process.uptime(), true)
-      .setTimestamp();
 
     await interaction.reply({ embeds: [embed] });
   }
