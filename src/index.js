@@ -40,4 +40,12 @@ client.on("ready", () => {
   }
 });
 
+client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'purge') {
+    return interaction.reply('hey!');
+  }
+});
+
 client.login(process.env.TOKEN);
