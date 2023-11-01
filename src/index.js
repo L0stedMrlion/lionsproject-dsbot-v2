@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
 
 const client = new Client({
   intents: [
@@ -37,6 +37,26 @@ client.on("ready", () => {
     client.user.setActivity("🦁 Lion's Project", {
       type: ActivityType.Listening,
     });
+  }
+});
+
+
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'info') {
+    const embed = new EmbedBuilder()
+      .setTitle('Discord.js Bot Information')
+      .setColor(0x00FFFF)
+      .setAuthor({ name: interaction.user.tag, iconURL: interaction.user.displayAvatarURL() })
+      .addField('Bot Name', client.user.username, true)
+      .addField('Bot ID', client.user.id, true)
+      .addField('Guilds', client.guilds.cache.size, true)
+      .addField('Users', client.users.cache.size, true)
+      .addField('Uptime', process.uptime(), true)
+      .setTimestamp();
+
+    await interaction.reply({ embeds: [embed] });
   }
 });
 
