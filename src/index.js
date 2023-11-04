@@ -50,9 +50,9 @@ client.on('interactionCreate', async (interaction) => {
       .setDescription(`
         Hello, I'm LionBot! 🦁
 
-        🔧  Developer: **${process.env.AUTHOR}**
-        📋  Version: **${process.env.BOT_VERSION}**
-        📻  Discord server: [Discord](https://discord.gg/BYHTyMCJkh)
+        🔧  Developer **${process.env.AUTHOR}**
+        📋  Version **${process.env.BOT_VERSION}**
+        📻  Discord server [Discord](https://discord.gg/BYHTyMCJkh)
 
       `)
       .setColor('#ffbc00')
