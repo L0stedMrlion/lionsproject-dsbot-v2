@@ -79,4 +79,14 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'dice') {
+    const dice_number = Math.floor(Math.random() * 6) + 1;
+
+    await interaction.reply(`🎲 The dice rolled a ${dice_number}`);
+  }
+});
+
 client.login(process.env.TOKEN);
