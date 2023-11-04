@@ -40,6 +40,7 @@ client.on("ready", () => {
   }
 });
 
+// Commands (/info)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
@@ -65,6 +66,7 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
+// Commands (/status)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
