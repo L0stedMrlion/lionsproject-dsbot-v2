@@ -55,7 +55,7 @@ client.on('interactionCreate', async (interaction) => {
 > ‎ 
 > If you have any feedback or suggestions, please let us know at our [Discord](https://discord.gg/BYHTyMCJkh)
 > ‎ 
-> Thank you for using LionBot! ❤️`);
+> Thank you for using LionBot ❤️`);
   }
 });
 
