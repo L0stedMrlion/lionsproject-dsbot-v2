@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, ActivityType, SlashCommandBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
 
 const client = new Client({
   intents: [
@@ -44,15 +44,24 @@ client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'info') {
-    await interaction.reply(`## 🦁 LionBot
-> Hello, I'm LionBot! 🦁
-> ‎ 
-> I'm developed by **${process.env.AUTHOR}**
-> Version: **${process.env.BOT_VERSION}**
-> ‎ 
-> If you have any feedback or suggestions, please let us know at our [Discord](https://discord.gg/BYHTyMCJkh)
-> ‎ 
-> Thank you for using LionBot ❤️`);
+    const embed = new EmbedBuilder()
+      .setTitle('🦁 LionBot')
+      .setDescription(`
+        Hello, I'm LionBot! 🦁
+
+        🔧  Developer: **${process.env.AUTHOR}**
+
+        📋  Version: **${process.env.BOT_VERSION}**
+
+        🎧  Discord server: [Discord](https://discord.gg/BYHTyMCJkh)
+      `)
+      .setColor('#FFB800')
+      .setThumbnail('https://cdn.discordapp.com/attachments/1092013099168583781/1170441421900218448/lionsproject_logo.png?ex=65590d84&is=65469884&hm=e321b014c27e21524e8efe2b72823971d9dfe8ffff1fedcced5b65391c4816b3')
+      .setFooter({
+        text: "🦁 Lion's Project™ © 2023",
+        iconURL: 'https://cdn.discordapp.com/attachments/1092013099168583781/1170441421900218448/lionsproject_logo.png?ex=65590d84&is=65469884&hm=e321b014c27e21524e8efe2b72823971d9dfe8ffff1fedcced5b65391c4816b3',
+      });
+    interaction.reply({ embeds: [embed] });
   }
 });
 
