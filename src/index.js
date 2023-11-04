@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, SlashCommandBuilder } = require("discord.js");
 
 const client = new Client({
   intents: [
@@ -26,6 +26,10 @@ client.once("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+
+  const info = new SlashCommandBuilder()
+    .setName("information")
+    .setDescription("Desp");
 });
 
 client.on("ready", () => {
@@ -37,6 +41,21 @@ client.on("ready", () => {
     client.user.setActivity("🦁 Lion's Project", {
       type: ActivityType.Listening,
     });
+  }
+});
+
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'info') {
+    await interaction.reply(`> Hello, I'm LionBot! 🦁
+> ‎ 
+> I'm developed by **${process.env.AUTHOR}**
+> Version: **${process.env.BOT_VERSION}**
+> ‎ 
+> If you have any feedback or suggestions, please let us know at our [Discord](https://discord.gg/BYHTyMCJkh)
+> ‎ 
+> Thank you for using LionBot! ❤️`);
   }
 });
 
