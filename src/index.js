@@ -30,6 +30,8 @@ client.once("ready", () => {
   const info = new SlashCommandBuilder()
     .setName("info")
     .setDescription("🦁 Gives information about LionBot");
+
+
 });
 
 client.on("ready", () => {
