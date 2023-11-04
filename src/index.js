@@ -26,15 +26,6 @@ client.once("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-
-  const info = new SlashCommandBuilder()
-    .setName("info")
-    .setDescription("🦁 Gives information about LionBot");
-
-  const status = new SlashCommandBuilder()
-    .setName("status")
-    .setDescription("📊 Gives all stats to our bot and other services");
-
 });
 
 client.on("ready", () => {
