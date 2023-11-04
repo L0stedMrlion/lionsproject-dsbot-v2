@@ -1,7 +1,5 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, ActivityType, SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { CommandHandler } = require('djs-commander');
-const path = require('path');
 
 const client = new Client({
   intents: [
@@ -22,12 +20,6 @@ const client = new Client({
     GatewayIntentBits.AutoModerationConfiguration,
     GatewayIntentBits.AutoModerationExecution,
   ],
-});
-
-new CommandHandler({
-  client,
-  commandsPath: path.join(__dirname, 'slash-commands'),
-  eventsPath: path.join(__dirname, 'events'),
 });
 
 client.once("ready", () => {
