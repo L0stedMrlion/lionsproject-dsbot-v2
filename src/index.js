@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
+const counting = require("./counting.js");
 
 const client = new Client({
   intents: [
