@@ -7,6 +7,10 @@ const commands = [
         description: '🦁 Gives information about LionBot',
     },
     {
+        name: 'dice',
+        description: '🎲 Generate number from 1 to 6',
+    },
+    {
         name: 'status',
         description: '📊 Gives all stats to our bot and other services',
     },
