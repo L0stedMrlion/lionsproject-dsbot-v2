@@ -31,6 +31,9 @@ client.once("ready", () => {
     .setName("info")
     .setDescription("🦁 Gives information about LionBot");
 
+  const status = new SlashCommandBuilder()
+    .setName("status")
+    .setDescription("📊 Gives all stats to our bot and other services");
 
 });
 
@@ -50,7 +53,8 @@ client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'info') {
-    await interaction.reply(`> Hello, I'm LionBot! 🦁
+    await interaction.reply(`## 🦁 LionBot
+> Hello, I'm LionBot! 🦁
 > ‎ 
 > I'm developed by **${process.env.AUTHOR}**
 > Version: **${process.env.BOT_VERSION}**
@@ -58,6 +62,14 @@ client.on('interactionCreate', async (interaction) => {
 > If you have any feedback or suggestions, please let us know at our [Discord](https://discord.gg/BYHTyMCJkh)
 > ‎ 
 > Thank you for using LionBot ❤️`);
+  }
+});
+
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'status') {
+    await interaction.reply('## 📊 Status\n> All statuses you can find on your [Status page](https://status.lionsproject.eu/)\n');
   }
 });
 
