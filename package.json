@@ -1,6 +1,6 @@
 {
   "name": "lionsproject-discordbot",
-  "version": "RELEASE 1.0",
+  "version": "PRE-RELEASE 1.01",
   "description": "",
   "main": "src/index.js",
   "scripts": {
