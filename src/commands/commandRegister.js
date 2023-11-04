@@ -16,7 +16,8 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
 (async () => {
     try {
-        console.log('Registering slash commands...');
+        console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+        console.log(" 🦁 Lion's Project™ - Registering slash commands... ");
 
         await rest.put(
             Routes.applicationGuildCommands(
@@ -26,7 +27,8 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
             { body: commands }
         );
 
-        console.log('Slash commands were registered successfully!');
+        console.log(" 🦁 Lion's Project™ - Slash commands were registered successfully! ");
+        console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
     } catch (error) {
         console.log(`There was an error: ${error}`);
     }
