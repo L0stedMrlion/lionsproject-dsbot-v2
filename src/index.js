@@ -1,5 +1,7 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, ActivityType, SlashCommandBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { CommandHandler } = require('djs-commander');
+const path = require('path');
 
 const client = new Client({
   intents: [
@@ -22,6 +24,12 @@ const client = new Client({
   ],
 });
 
+new CommandHandler({
+  client,
+  commandsPath: path.join(__dirname, 'slash-commands'),
+  eventsPath: path.join(__dirname, 'events'),
+});
+
 client.once("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
@@ -41,21 +49,6 @@ client.on("ready", () => {
     client.user.setActivity("🦁 Lion's Project", {
       type: ActivityType.Listening,
     });
-  }
-});
-
-client.on('interactionCreate', async (interaction) => {
-  if (!interaction.isChatInputCommand()) return;
-
-  if (interaction.commandName === 'info') {
-    await interaction.reply(`> Hello, I'm LionBot! 🦁
-> ‎ 
-> I'm developed by **${process.env.AUTHOR}**
-> Version: **${process.env.BOT_VERSION}**
-> ‎ 
-> If you have any feedback or suggestions, please let us know at our [Discord](https://discord.gg/BYHTyMCJkh)
-> ‎ 
-> Thank you for using LionBot! ❤️`);
   }
 });
 
