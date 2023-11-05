@@ -28,6 +28,15 @@ client.on("guildLeave", (guild) => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
 });
 
+// Reakce na ping
+client.on("message", (message) => {
+  // Zkontrolujte, zda je zpráva označena pro bota.
+  if (message.mentions.users.includes(client.user)) {
+    // Napište odpověď na zprávu.
+    message.reply("Ahoj!");
+  }
+});
+
 // Console
 client.once("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
