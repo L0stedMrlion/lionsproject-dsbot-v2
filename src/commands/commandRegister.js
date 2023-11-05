@@ -38,6 +38,8 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
         console.log(" 🦁 Lion's Project™ - Slash commands were registered successfully! ");
         console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
     } catch (error) {
-        console.log(`There was an error: ${error}`);
+        console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+        console.log(` 🦁 Lion's Project™ - There was an error: ${error}`);
+        console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
     }
 })();
