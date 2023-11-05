@@ -4,18 +4,8 @@ Discord bot for our project named 🦁 Lion's Project! This bot is for utilities
 
 Did you se some issue or some idea? You can create a bug or feature request [here](https://github.com/L0stedMrlion/lionsproject-dsbot/issues)!
 
-## 💾 Download
-
-`sudo apt update`
-
-`sudo apt install git`
-
-## 📋 Extensions
+## 📋 Extensions - required!
 
 `npm install discord.js` - discord.js
 
 `npm install dotenv` - dotenv
-
-`npm install typescript` - TypeScript
-
-`npm install tsx types@node` - TSX
