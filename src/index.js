@@ -148,7 +148,7 @@ const jokes = [
   'I used to be a baker, but I couldn’t make enough dough.',
 ];
 
-
+// Error handler for token
 try {
   client.login(process.env.TOKEN);
 } catch (error) {
