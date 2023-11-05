@@ -35,9 +35,24 @@ client.on("ready", () => {
 
 // Jokes
 const jokes = [
-  "Proč se slon nemůže schovat v lese? Protože je tam moc stromů.",
-  "Proč je mořský koník tak dobrý v pokeru? Protože má rybí tvář.",
-  "Proč je slon tak pomalý? Protože má velké nohy.",
+  "Backendeři, drž se svého PHPka.",
+  "Asi zkoušky webdesignu",
+  "JS.",
+  "Better than sex?",
+  "Jak přitáhnout ženy?",
+  "Slovo 'prográmátor' je v angličtině 'programmer'. Proč? Protože 'pro' znamená 'pro' a 'grám' znamená 'gram'.",
+  "Proč se programátoři bojí jít do lesa? Protože tam jsou stromy.",
+  "Proč je JavaScript tak pomalý? Protože je to skriptovací jazyk.",
+  "Proč je JavaScript tak složitý? Protože je to objektově orientovaný jazyk.",
+  "Proč je JavaScript tak neefektivní? Protože je to dynamický jazyk.",
+  "Proč je JavaScript tak choulostivý? Protože je to interpretovaný jazyk.",
+  "Proč je JavaScript tak náchylný k chybám? Protože je to jazyk s otevřeným zdrojovým kódem.",
+  "Proč je JavaScript tak populární? Protože je to jazyk s krátkou učebnou křivkou.",
+  "Proč je JavaScript tak užitečný? Protože je to jazyk s širokou škálou použití.",
+  "Proč je JavaScript tak oblíbený? Protože je to jazyk s velkým množstvím knihoven a nástrojů.",
+  "Proč je JavaScript tak těžké naučit se? Protože je to jazyk s mnoha nuansami.",
+  "Proč je JavaScript tak frustrující? Protože je to jazyk s mnoha chybami.",
+  "Proč je JavaScript tak zábavný? Protože je to jazyk s mnoha vtipy.",
 ];
 
 // Command (/info)
@@ -104,7 +119,7 @@ client.on('interactionCreate', async (interaction) => {
   if (interaction.commandName === 'joke') {
     const joke = jokes[Math.floor(Math.random() * jokes.length)];
     const embed = new EmbedBuilder();
-    embed.setTitle(`Joke of the day`);
+    embed.setTitle(`🐸 Joke of the day`);
     embed.setDescription(joke);
     embed.setColor('#1d6340');
     embed.setFooter({
