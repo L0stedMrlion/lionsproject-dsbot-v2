@@ -15,6 +15,20 @@ const client = new Client({
   ],
 });
 
+// Discord server joined and leave
+client.on("guildJoin", (guild) => {
+  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+  console.log(` 🦁 Lion's Project™ - Právě jsem se připojil do guildy ${guild.name} s ID ${guild.id}`);
+  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+});
+
+client.on("guildLeave", (guild) => {
+  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+  console.log(` 🦁 Lion's Project™ - Právě jsem se odpojil z guildy ${guild.name} s ID ${guild.id}`);
+  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+});
+
+// Console
 client.once("ready", () => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
   console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
