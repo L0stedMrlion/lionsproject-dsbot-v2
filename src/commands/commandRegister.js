@@ -16,7 +16,7 @@ const commands = [
     },
     {
         name: 'joke',
-        description: '🐸 Generate random joke',
+        description: '🐸 Generate random funny joke',
     },
 ];
 
