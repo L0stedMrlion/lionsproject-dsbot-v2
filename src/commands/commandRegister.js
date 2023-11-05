@@ -14,6 +14,10 @@ const commands = [
         name: 'status',
         description: '📊 Gives all stats to our bot and other services',
     },
+    {
+        name: 'joke',
+        description: '🐸 Generate random joke',
+    },
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
