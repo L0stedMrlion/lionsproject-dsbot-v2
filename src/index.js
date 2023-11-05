@@ -125,4 +125,11 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
+try {
+  client.login(process.env.TOKEN);
+} catch (error) {
+  console.error(" 🦁 Lion's Project™ - Unable to login to Discord:", error);
+  process.exit(1);
+}
+
 client.login(process.env.TOKEN);
