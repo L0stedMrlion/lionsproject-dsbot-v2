@@ -25,7 +25,6 @@ const client = new Client({
     GatewayIntentBits.GuildMessageReactions,
     GatewayIntentBits.GuildMessageTyping,
     GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildModeration,
     GatewayIntentBits.GuildScheduledEvents,
     GatewayIntentBits.MessageContent,
   ],
@@ -61,7 +60,7 @@ client.on('interactionCreate', async (interaction) => {
 
         🔧  Developer **${process.env.AUTHOR}**
         📋  Version **${process.env.BOT_VERSION}**
-        👨‍💻  Discord server [Discord](https://discord.gg/BYHTyMCJkh)
+          Discord server [Discord](https://discord.gg/BYHTyMCJkh)
 
       `)
       .setColor('#ffbc00')
@@ -82,7 +81,7 @@ client.on('interactionCreate', async (interaction) => {
     const embed = new EmbedBuilder()
       .setTitle('📊 Status')
       .setDescription(`
-        
+
         All statuses you can find here on your [Status page](https://status.lionsproject.eu)
 
       `)
