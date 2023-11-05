@@ -25,6 +25,8 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 (async () => {
     try {
         console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+        console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
+        console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
         console.log(" 🦁 Lion's Project™ - Checking and registering new slash commands... ");
 
         await rest.put(

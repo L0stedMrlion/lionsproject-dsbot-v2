@@ -29,12 +29,6 @@ client.on("guildLeave", (guild) => {
 });
 
 // Console
-client.once("ready", () => {
-  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-  console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
-  console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-});
-
 client.on("ready", () => {
   if (client.user) {
     console.log(" 🦁 Lion's Project™ - Loading... ");
