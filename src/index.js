@@ -33,6 +33,13 @@ client.on("ready", () => {
   }
 });
 
+// Jokes
+const jokes = [
+  "Proč se slon nemůže schovat v lese? Protože je tam moc stromů.",
+  "Proč je mořský koník tak dobrý v pokeru? Protože má rybí tvář.",
+  "Proč je slon tak pomalý? Protože má velké nohy.",
+];
+
 // Command (/info)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
@@ -87,6 +94,21 @@ client.on('interactionCreate', async (interaction) => {
     const dice_number = Math.floor(Math.random() * 6) + 1;
 
     await interaction.reply(`🎲 The dice rolled a ${dice_number}`);
+  }
+});
+
+// Command (/joke)
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'joke') {
+    const joke = jokes[Math.floor(Math.random() * jokes.length)];
+    const embed = new EmbedBuilder();
+    embed.setTitle(`Joke of the day`);
+    embed.setDescription(joke);
+    embed.setColor('Random');
+
+    interaction.reply({ embeds: [embed] });
   }
 });
 
