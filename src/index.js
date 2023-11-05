@@ -60,7 +60,7 @@ client.on('interactionCreate', async (interaction) => {
 
         🔧  Developer **${process.env.AUTHOR}**
         📋  Version **${process.env.BOT_VERSION}**
-          Discord server [Discord](https://discord.gg/BYHTyMCJkh)
+        👨‍💻 Discord server [Discord](https://discord.gg/BYHTyMCJkh)
 
       `)
       .setColor('#ffbc00')
