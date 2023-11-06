@@ -18,13 +18,13 @@ const client = new Client({
 // Discord server joined and leave
 client.on("guildJoin", (guild) => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-  console.log(` 🦁 Lion's Project™ - Právě jsem se připojil do guildy ${guild.name} s ID ${guild.id}`);
+  console.log(` 🦁 Lion's Project™ - Just joined guild ${guild.name} with ID ${guild.id}`);
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
 });
 
 client.on("guildLeave", (guild) => {
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-  console.log(` 🦁 Lion's Project™ - Právě jsem se odpojil z guildy ${guild.name} s ID ${guild.id}`);
+  console.log(` 🦁 Lion's Project™ - Just left guild ${guild.name} with ID ${guild.id}`);
   console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
 });
 
