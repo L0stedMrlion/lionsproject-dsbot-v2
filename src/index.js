@@ -156,6 +156,15 @@ const jokes = [
   'I used to be a baker, but I couldn’t make enough dough.',
 ];
 
+// Command (/ping)
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'ping') {
+    await interaction.reply(`Pong! Client ${ping}ms | Websocket: ${client.ws.ping}ms`);
+  }
+});
+
 // Error handler for token
 try {
   client.login(process.env.TOKEN);
