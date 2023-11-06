@@ -156,12 +156,16 @@ const jokes = [
   'I used to be a baker, but I couldn’t make enough dough.',
 ];
 
+const ping = Date.now();
+
 // Command (/ping)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'ping') {
-    await interaction.reply(`Pong! Client ${ping}ms | Websocket: ${client.ws.ping}ms`);
+    const ping = Date.now() - interaction.createdAt;
+
+    await interaction.reply(`:ping_pong: Pong! Client **${ping}ms** ` | ` Websocket: **${client.ws.ping}ms**`);
   }
 });
 
