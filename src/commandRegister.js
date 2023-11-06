@@ -31,7 +31,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
         console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
         console.log(" 🦁 Lion's Project™ - Discord bot", process.env.BOT_VERSION);
         console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-        console.log(" 🦁 Lion's Project™ (Command Register) - Checking and registering new slash commands... ");
+        console.log(" 🦁 Lion's Project™ - Checking and registering new slash commands... ");
 
         await rest.put(
             Routes.applicationGuildCommands(
@@ -41,10 +41,10 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
             { body: commands }
         );
 
-        console.log(" 🦁 Lion's Project™ (Command Register) - Slash commands were registered successfully! ");
+        console.log(" 🦁 Lion's Project™ - Slash commands were registered successfully! ");
     } catch (error) {
         console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
-        console.log(` 🦁 Lion's Project™ (Command Register) - There was an error: ${error}`);
+        console.log(` 🦁 Lion's Project™ - There was an error: ${error}`);
         console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
     }
 })();
