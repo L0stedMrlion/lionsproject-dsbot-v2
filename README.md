@@ -4,7 +4,9 @@ Discord bot for our project named 🦁 Lion's Project! This bot is for utilities
 
 Did you se some issue or some idea? You can create a bug or feature request [here](https://github.com/L0stedMrlion/lionsproject-dsbot/issues)!
 
-## 📋 Extensions - required!
+## 📋 Extensions & Dependencies
+
+`Node.js v20` - I use the newest node.js, but you can use older igs?
 
 `npm install discord.js` - discord.js
 
