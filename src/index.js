@@ -165,7 +165,8 @@ client.on('interactionCreate', async (interaction) => {
   if (interaction.commandName === 'ping') {
     const ping = Date.now() - interaction.createdAt;
 
-    await interaction.reply(`:ping_pong: Pong! Client **${ping}ms** ` | ` Websocket: **${client.ws.ping}ms**`);
+    await interaction.reply(
+      `🏓 Pong! Client ${ping}ms | Websocket: ${client.ws.ping}ms`);
   }
 });
 
