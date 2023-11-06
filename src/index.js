@@ -31,7 +31,7 @@ client.on("guildLeave", (guild) => {
 // Console
 client.on("ready", () => {
   if (client.user) {
-    console.log(" 🦁 Lion's Project™ - Loading... ");
+    console.log(" 🦁 Lion's Project™ - Loading files... ");
     console.log(" 🦁 Lion's Project™ - Loaded! ");
     console.log(" 🦁 Lion's Project™ - Bot have been successfully enabled! ");
     console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
