@@ -37,7 +37,6 @@ client.on("ready", () => {
   }
 });
 
-
 // Command (/info)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
