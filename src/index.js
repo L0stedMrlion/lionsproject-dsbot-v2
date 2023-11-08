@@ -178,7 +178,7 @@ client.on('interactionCreate', async (interaction) => {
 
     await interaction.channel.messages.delete(count);
 
-    interaction.reply(`Purged ${count} messages.`);
+    interaction.reply(`🧹 Purged ${count} messages.`);
   }
 });
 
