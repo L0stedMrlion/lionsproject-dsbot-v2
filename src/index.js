@@ -169,16 +169,15 @@ client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'purge') {
-    const count = interaction.options.get('count').value;
+    const message_count = interaction.options.get('count').value;
 
     if (!Number.isInteger(count) || count < 1) {
-      interaction.reply('🧹 The count parameter must be a valid integer greater than or equal to 1.', { ephemeral: true });;
       return;
     }
 
-    await interaction.channel.bulkDelete(count)
+    await interaction.channel.bulkDelete(message_count);
 
-    interaction.reply(`🧹 Purged ${count} messages.`, { ephemeral: true });;
+    interaction.reply(`🧹 Purged ${message_count} messages.`, { ephemeral: true });;
   }
 });
 
