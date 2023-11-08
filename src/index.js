@@ -175,10 +175,13 @@ client.on('interactionCreate', async (interaction) => {
       return;
     }
 
+    if (!Number.isInteger(count) || count > 200) {
+      return;
+    }
+
     await interaction.channel.bulkDelete(count);
 
-    interaction.reply(`:broom: Purged ${messages.length} messages.`);
-    interaction.deleteReply
+    interaction.reply({ content: ":broom: Messages successfully purged!", ephemeral: true });
   }
 });
 
