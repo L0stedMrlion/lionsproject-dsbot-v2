@@ -172,13 +172,13 @@ client.on('interactionCreate', async (interaction) => {
     const count = interaction.options.get('count').value;
 
     if (!Number.isInteger(count) || count < 1) {
-      interaction.reply('The count parameter must be a valid integer greater than or equal to 1.');
+      interaction.reply('🧹 The count parameter must be a valid integer greater than or equal to 1.', { ephemeral: true });;
       return;
     }
 
-    await interaction.channel.messages.delete(count);
+    await interaction.channel.bulkDelete(count)
 
-    interaction.reply(`🧹 Purged ${count} messages.`);
+    interaction.reply(`🧹 Purged ${count} messages.`, { ephemeral: true });;
   }
 });
 
