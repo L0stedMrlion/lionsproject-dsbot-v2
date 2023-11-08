@@ -177,7 +177,8 @@ client.on('interactionCreate', async (interaction) => {
 
     await interaction.channel.bulkDelete(count);
 
-    interaction.reply(`Purged ${messages.length} messages.`);
+    interaction.reply(`:broom: Purged ${messages.length} messages.`);
+    interaction.deleteReply
   }
 });
 
