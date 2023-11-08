@@ -165,6 +165,23 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'purge') {
+    const count = interaction.options.get('count').value;
+
+    if (!Number.isInteger(count) || count < 1) {
+      interaction.reply('The count parameter must be a valid integer greater than or equal to 1.');
+      return;
+    }
+
+    await interaction.channel.messages.delete(count);
+
+    interaction.reply(`Purged ${count} messages.`);
+  }
+});
+
 // Discord bot login & Error Handler
 try {
   client.login(process.env.TOKEN);
