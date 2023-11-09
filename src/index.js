@@ -175,7 +175,7 @@ client.on('interactionCreate', async (interaction) => {
       return;
     }
 
-    if (!Number.isInteger(count) || count > 200) {
+    if (!Number.isInteger(count) || count > 250) {
       return;
     }
 
@@ -184,6 +184,7 @@ client.on('interactionCreate', async (interaction) => {
     interaction.reply({ content: ":broom: Messages successfully purged!", ephemeral: true });
   }
 });
+
 
 // Discord bot login & Error Handler
 try {
