@@ -172,10 +172,12 @@ client.on('interactionCreate', async (interaction) => {
     const count = interaction.options.get('count').value;
 
     if (!Number.isInteger(count) || count < 1) {
+      interaction.reply({ content: ":broom: You need purge more than 1 message!", ephemeral: true });
       return;
     }
 
     if (!Number.isInteger(count) || count > 250) {
+      interaction.reply({ content: ":broom: You can purge more than 250 message!", ephemeral: true });
       return;
     }
 
