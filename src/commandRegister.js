@@ -53,10 +53,10 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
             { body: commands }
         );
 
-        console.log('🦁 Lion’s Project™ - Slash commands were registered successfully!');
+        console.log(' 🦁 Lion’s Project™ - Slash commands were registered successfully!');
     } catch (error) {
         console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-        console.log(`🦁 Lion’s Project™ - There was an error: ${error}`);
+        console.log(` 🦁 Lion’s Project™ - There was an error: ${error}`);
         console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
     }
 })();
