@@ -1,6 +1,5 @@
 require('dotenv').config();
 const commandRegister = require('./commandRegister.js');
-const jokes = require('./variables/jokes.js');
 const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
 
 const client = new Client({
