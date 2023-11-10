@@ -5,13 +5,10 @@ const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("disco
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildIntegrations,
     GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessageReactions,
-    GatewayIntentBits.GuildMessageTyping,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildScheduledEvents,
-    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.DirectMessages,
   ],
 });
 
