@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const commandRegister = require('./commandRegister.js');
-const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, EmbedBuilder, ReactionEmoji, Events } = require("discord.js");
 dotenv.config();
 
 const client = new Client({
@@ -15,7 +15,7 @@ const client = new Client({
 });
 
 // Console
-client.on("ready", () => {
+client.once("ready", () => {
   if (client.user) {
     console.log("  Lion's Project™ - Loading files... ");
     console.log("  Lion's Project™ - Loaded! ");
