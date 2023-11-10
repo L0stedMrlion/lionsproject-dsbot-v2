@@ -1,12 +1,14 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
 const commandRegister = require('./commandRegister.js');
 const { Client, GatewayIntentBits, ActivityType, EmbedBuilder } = require("discord.js");
+dotenv.config();
 
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
     GatewayIntentBits.GuildScheduledEvents,
     GatewayIntentBits.DirectMessages,
   ],
