@@ -153,6 +153,6 @@ client.on('interactionCreate', async (interaction) => {
 try {
   client.login(process.env.TOKEN);
 } catch (error) {
-  console.error(" 🦁 Lion's Project™ - Unable to login to Discord ");
+  console.error(" Lion's Project™ - Unable to login to Discord ");
   process.exit(1);
 }
