@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const commandRegister = require('./commandRegister.js');
-const { Client, GatewayIntentBits, ActivityType, EmbedBuilder, ReactionEmoji, Events } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, EmbedBuilder, ReactionEmoji, Events, WebSocketShardDestroyRecovery } = require("discord.js");
 dotenv.config();
 
 const client = new Client({
@@ -183,5 +183,5 @@ try {
   client.login(process.env.TOKEN);
 } catch (error) {
   console.error(" Lion's Project™ - Unable to login to Discord ");
-  process.exit(1);
+  destroy()
 }
