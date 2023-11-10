@@ -17,19 +17,19 @@ const client = new Client({
 
 // Discord server joined and leave
 client.on("guildJoin", (guild) => {
-  console.log(` 🦁 Lion's Project™ - Just joined guild ${guild.name} with ID ${guild.id}`);
+  console.log(` Lion's Project™ - Just joined guild ${guild.name} with ID ${guild.id}`);
 });
 
 client.on("guildLeave", (guild) => {
-  console.log(` 🦁 Lion's Project™ - Just left guild ${guild.name} with ID ${guild.id}`);
+  console.log(` Lion's Project™ - Just left guild ${guild.name} with ID ${guild.id}`);
 });
 
 // Console
 client.on("ready", () => {
   if (client.user) {
-    console.log(" 🦁 Lion's Project™ - Loading files... ");
-    console.log(" 🦁 Lion's Project™ - Loaded! ");
-    console.log(" 🦁 Lion's Project™ - Bot have been successfully enabled! ");
+    console.log("  Lion's Project™ - Loading files... ");
+    console.log("  Lion's Project™ - Loaded! ");
+    console.log("  Lion's Project™ - Bot have been successfully enabled! ");
     console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
     client.user.setActivity("🦁 Lion's Project", {
       type: ActivityType.Listening,
