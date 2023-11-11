@@ -30,7 +30,7 @@ const commands = [
             {
                 name: 'count',
                 description: 'The number of messages to delete',
-                type: ApplicationCommandOptionType.Integer,
+                type: ApplicationCommandOptionType.Number,
                 required: true,
             },
         ],

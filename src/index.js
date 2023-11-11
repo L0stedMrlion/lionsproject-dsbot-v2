@@ -202,7 +202,7 @@ client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'purge') {
-    const count = interaction.options.get('count').value;
+    const count = interaction.options.getNumber('count').value;
 
     if (!Number.isInteger(count) || count < 1) {
       interaction.reply({ content: ":broom: You need purge more than 1 message!", ephemeral: true });
@@ -222,7 +222,6 @@ client.on('interactionCreate', async (interaction) => {
 
 // Command (/auth)
 client.on('interactionCreate', async (interaction) => {
-  if (message.author.id === '710549603216261141')
   if (!interaction.isChatInputCommand()) return;
   const user = await interaction.options.getUser("user");
   if (interaction.commandName === 'send-dm') {
