@@ -25,26 +25,14 @@ const commands = [
         description: '🏓 Replies with pong!',
     },
     {
-        name: 'auth',
-        description: '🤖 Authentication for user trough Discord oAuth2',
+        name: 'send-dm',
+        description: 'Sends a DM to the specified user',
         options: [
             {
                 name: 'user',
                 description: 'The user you want to send this message',
                 type: ApplicationCommandOptionType.Integer,
                 required: true,
-            },
-            {
-                name: 'purge',
-                description: '🧹 Deletes number of message in channel',
-                options: [
-                    {
-                        name: 'count',
-                        description: 'The number of messages to delete.',
-                        type: ApplicationCommandOptionType.Integer,
-                        required: true,
-                    },
-                ],
             },
         ],
     },
