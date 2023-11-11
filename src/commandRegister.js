@@ -25,7 +25,7 @@ const commands = [
     },
     {
         name: 'purge',
-        description: '🗑️ Deletes a specified number of messages',
+        description: '🧹 Deletes a specified number of messages',
         options: [
             {
                 name: 'count',
