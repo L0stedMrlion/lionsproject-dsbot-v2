@@ -32,7 +32,7 @@ const management_roles = [
   1167143976302805093,
 ];
 
-const management_m_roles = [
+const management_and_mods_roles = [
   1092013060983640084,
   1167143976302805093,
   1092013063089172532,
