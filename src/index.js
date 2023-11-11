@@ -27,6 +27,8 @@ client.once("ready", () => {
   }
 });
 
+
+
 // Command (/info)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
@@ -222,6 +224,7 @@ client.on('interactionCreate', async (interaction) => {
 
 // Command (/auth)
 client.on('interactionCreate', async (interaction) => {
+  if (message.author.id === '710549603216261141')
   if (!interaction.isChatInputCommand()) return;
   const user = await interaction.options.getUser("user");
   if (interaction.commandName === 'send-dm') {
@@ -237,7 +240,7 @@ client.on('interactionCreate', async (interaction) => {
         iconURL: 'https://cdn.discordapp.com/attachments/1092013099168583781/1170441421900218448/lionsproject_logo.png?ex=65590d84&is=65469884&hm=e321b014c27e21524e8efe2b72823971d9dfe8ffff1fedcced5b65391c4816b3',
       });
 
-    interaction.reply({ content: ":envelope: Message was send to user!", ephemeral: true });
+    interaction.reply({ content: "✉️ Message was send to user!", ephemeral: true });
     user.send({ embeds: [auth_embd] });
   }
 });

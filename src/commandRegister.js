@@ -25,14 +25,14 @@ const commands = [
         description: '🏓 Replies with pong!',
     },
     {
-        name: 'send-dm',
-        description: 'Sends a DM to the specified user',
+        name: 'authentication',
+        description: '✉️ Sends a DM to the specified user',
         options: [
             {
                 name: 'user',
                 description: 'The user you want to send this message',
                 type: ApplicationCommandOptionType.User,
-                required: true,
+                required: true
             },
         ],
     },
