@@ -31,7 +31,7 @@ const commands = [
             {
                 name: 'user',
                 description: 'The user you want to send this message',
-                type: ApplicationCommandOptionType.Integer,
+                type: ApplicationCommandOptionType.User,
                 required: true,
             },
         ],

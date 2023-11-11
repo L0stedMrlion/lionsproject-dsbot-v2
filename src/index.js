@@ -223,30 +223,24 @@ client.on('interactionCreate', async (interaction) => {
 // Command (/auth)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
+  const user = await interaction.options.getUser("User")
 
   if (interaction.commandName === 'send-dm') {
-    const embed = new Discord.MessageEmbed()
-      .setTitle('Purge Command')
-      .setDescription('This command will purge messages in the current channel.')
-      .setColor('RED');
 
-    const button = new Discord.MessageButton()
-      .setLabel('Purge Messages')
+    const embed = new MessageEmbed()
+      .setTitle('Embed s link buttonem')
+      .setDescription('Tato embed má link button, který vás odkáže na [Google](https://www.google.com/).')
+      .setColor('#00FFFF');
+
+    const linkButton = new MessageButton()
       .setStyle('LINK')
-      .setURL('https://example.com/purge');
+      .setLabel('Otevřít Google')
+      .setUrl('https://www.google.com/');
 
-    embed.addButton(button);
+    embed.addComponent(new ActionRow().addComponents(linkButton));
+    user.send({ embeds: [embed] });
 
-    interaction.reply({
-      content: ':envelope: Message was send to user!',
-      embeds: [embed],
-      ephemeral: true,
-    });
-
-    // Send the embed to the user's DMs
-    interaction.user.send({
-      embeds: [embed],
-    });
+    interaction.reply(`Poslal jsem ti embed do DM!`);
   }
 });
 
