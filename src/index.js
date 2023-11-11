@@ -224,7 +224,7 @@ client.on('interactionCreate', async (interaction) => {
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
   const user = await interaction.options.getUser("user");
-  if (interaction.commandName === 'send-dm') {
+  if (interaction.commandName === 'authentication') {
 
     const auth_embd = new EmbedBuilder()
       .setTitle("🦁 Lion's Project™ Authentication")
