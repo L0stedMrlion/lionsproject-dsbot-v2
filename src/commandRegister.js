@@ -1,6 +1,5 @@
 const dotenv = require('dotenv');
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
-
 dotenv.config();
 
 const commands = [
@@ -18,11 +17,23 @@ const commands = [
     },
     {
         name: 'joke',
-        description: '🐸 Generate random funny joke',
+        description: '🐸 Generate some funny joke',
     },
     {
         name: 'ping',
         description: '🏓 Replies with pong!',
+    },
+    {
+        name: 'purge',
+        description: '🗑️ Deletes a specified number of messages',
+        options: [
+            {
+                name: 'count',
+                description: 'The number of messages to delete',
+                type: ApplicationCommandOptionType.Integer,
+                required: true,
+            },
+        ],
     },
     {
         name: 'authentication',
