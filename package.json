@@ -1,6 +1,6 @@
 {
   "name": "lionsproject-dsbot",
-  "version": "1.0.0",
+  "version": "TS RELEASE 0.1 BETA",
   "description": "Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.",
   "main": "dist/index.js",
   "scripts": {
