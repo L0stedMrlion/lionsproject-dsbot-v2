@@ -220,6 +220,16 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
+// Command (/auth)
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'purge') {
+    interaction.reply({
+      content: ":envelope: Message was send to user!", ephemeral: true
+    });
+  }
+});
 
 // Discord bot login & Error Handler
 try {
