@@ -223,24 +223,25 @@ client.on('interactionCreate', async (interaction) => {
 // Command (/auth)
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
-  const user = await interaction.options.getUser("User")
+  const user = await interaction.options.getUser("user");
 
   if (interaction.commandName === 'send-dm') {
 
-    const embed = new MessageEmbed()
-      .setTitle('Embed s link buttonem')
-      .setDescription('Tato embed má link button, který vás odkáže na [Google](https://www.google.com/).')
-      .setColor('#00FFFF');
+    const auth_embd = new EmbedBuilder()
+      .setTitle("🦁 Lion's Project™ Authentication")
+      .setDescription(`
+        Hello, you need to authenticate. Click to button below and auth our self.
 
-    const linkButton = new MessageButton()
-      .setStyle('LINK')
-      .setLabel('Otevřít Google')
-      .setUrl('https://www.google.com/');
+      `)
+      .setColor('#ffbc00')
+      .setFooter({
+        text: "🦁 Lion's Project™ © 2023",
+        iconURL: 'https://cdn.discordapp.com/attachments/1092013099168583781/1170441421900218448/lionsproject_logo.png?ex=65590d84&is=65469884&hm=e321b014c27e21524e8efe2b72823971d9dfe8ffff1fedcced5b65391c4816b3',
+      });
 
-    embed.addComponent(new ActionRow().addComponents(linkButton));
-    user.send({ embeds: [embed] });
+    interaction.reply({ content: ":envelope: Zprávu jsem odeslal danému uživateli do DMs!", ephemeral: true });
 
-    interaction.reply(`Poslal jsem ti embed do DM!`);
+    user.send({ embeds: [auth_embd] });
   }
 });
 
