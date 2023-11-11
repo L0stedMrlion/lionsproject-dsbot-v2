@@ -12,3 +12,13 @@ const client = new Client({
       GatewayIntentBits.DirectMessages,
     ],
   });
+
+  client.on("messageCreate", async (message) => {
+    if (message.author.bot) {
+      return;
+    }
+
+    if (message.content.includes("<@1018249171720998983>")) {
+      message.reply("Zdravím, jak ti mohu pomoci?");
+    }
+  });
