@@ -14,11 +14,15 @@ Discord bot for our project named 🦁 Lion's Project! This bot is for utilities
  
 `/joke` - show you some very "quality" joke
 
+`/purge` - deletes some number of message; not older than 14 days
+
+`/authentication` - send message to PM and gives link to authentication with ds oauth2
+
 `More commands will be added in future` 
  
 ## 📋 Extensions & Dependencies
 
-`Node.js v20` - I use the newest node.js, but you can use older igs?
+`Node.js v20 or lower` - I use the newest node.js, but you can use older igs?
 
 `npm install discord.js` - discord.js
 
