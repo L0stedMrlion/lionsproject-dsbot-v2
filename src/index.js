@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 const commandRegister = require('./commandRegister.js');
 const commands = require('./commands.js');
-const { Client, GatewayIntentBits, ActivityType, EmbedBuilder, Events} = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
 dotenv.config();
 
 const client = new Client({
