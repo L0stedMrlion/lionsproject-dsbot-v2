@@ -224,9 +224,28 @@ client.on('interactionCreate', async (interaction) => {
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'purge') {
+  if (interaction.commandName === 'send-dm') {
+    const embed = new Discord.MessageEmbed()
+      .setTitle('Purge Command')
+      .setDescription('This command will purge messages in the current channel.')
+      .setColor('RED');
+
+    const button = new Discord.MessageButton()
+      .setLabel('Purge Messages')
+      .setStyle('LINK')
+      .setURL('https://example.com/purge');
+
+    embed.addButton(button);
+
     interaction.reply({
-      content: ":envelope: Message was send to user!", ephemeral: true
+      content: ':envelope: Message was send to user!',
+      embeds: [embed],
+      ephemeral: true,
+    });
+
+    // Send the embed to the user's DMs
+    interaction.user.send({
+      embeds: [embed],
     });
   }
 });
