@@ -1,5 +1,6 @@
 const dotenv = require('dotenv');
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
+
 dotenv.config();
 
 const commands = [
@@ -26,16 +27,24 @@ const commands = [
     {
         name: 'auth',
         description: '🤖 Authentication for user trough Discord oAuth2',
-    },
-    {
-        name: 'purge',
-        description: '🧹 Deletes number of message in channel',
         options: [
             {
-                name: 'count',
-                description: 'The number of messages to delete.',
+                name: 'user',
+                description: 'The user you want to send this message',
                 type: ApplicationCommandOptionType.Integer,
                 required: true,
+            },
+            {
+                name: 'purge',
+                description: '🧹 Deletes number of message in channel',
+                options: [
+                    {
+                        name: 'count',
+                        description: 'The number of messages to delete.',
+                        type: ApplicationCommandOptionType.Integer,
+                        required: true,
+                    },
+                ],
             },
         ],
     },
@@ -51,10 +60,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
         console.log(' Lion’s Project™ - Checking and registering new slash commands... ');
 
         await rest.put(
-            Routes.applicationGuildCommands(
-                process.env.CLIENT_ID,
-                process.env.GUILD_ID
-            ),
+            Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
             { body: commands }
         );
 
