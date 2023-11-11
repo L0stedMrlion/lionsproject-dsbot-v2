@@ -24,6 +24,10 @@ const commands = [
         description: '🏓 Replies with pong!',
     },
     {
+        name: 'auth',
+        description: '🤖 Authentication for user trough Discord oAuth2',
+    },
+    {
         name: 'purge',
         description: '🧹 Deletes number of message in channel',
         options: [
