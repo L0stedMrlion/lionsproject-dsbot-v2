@@ -1,6 +1,6 @@
 {
   "project_name": "lionsproject-dsbot",
-  "project_version": "RELEASE 1.02",
+  "project_version": "RELEASE 1.03.1",
   "description": "Discord bot for our Discord.",
   "main": "src/index.js",
   "scripts": {
