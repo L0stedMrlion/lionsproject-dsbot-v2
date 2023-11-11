@@ -2,4 +2,3 @@
 /node_modules
 .prettierignore
 .prettierrc.json
-packeage-lock.json
