@@ -20,5 +20,6 @@ const client = new Client({
 
     if (message.content.includes("<@1018249171720998983>")) {
       message.reply("Zdravím, jak ti mohu pomoci?");
+      console.log("sds")
     }
   });
