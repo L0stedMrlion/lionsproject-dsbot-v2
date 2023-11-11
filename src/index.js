@@ -27,7 +27,16 @@ client.once("ready", () => {
   }
 });
 
+const management_roles = [
+  1092013060983640084,
+  1167143976302805093,
+];
 
+const management_m_roles = [
+  1092013060983640084,
+  1167143976302805093,
+  1092013063089172532,
+];
 
 // Command (/info)
 client.on('interactionCreate', async (interaction) => {
