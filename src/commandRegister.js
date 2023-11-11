@@ -53,9 +53,9 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
 (async () => {
     try {
-        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.log('  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ');
         console.log("  Lion’s Project™ - Discord bot - ", process.env.BOT_VERSION);
-        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.log('  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ');
         console.log('  Lion’s Project™ - Checking and registering new slash commands... ');
 
         await rest.put(
@@ -65,8 +65,8 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
         console.log('  Lion’s Project™ - Slash commands were registered successfully!  ');
     } catch (error) {
-        console.error('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.error('  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ');
         console.error(`  Lion’s Project™ - There was an error: ${error}`);
-        console.error('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.error('  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ');
     }
 })();

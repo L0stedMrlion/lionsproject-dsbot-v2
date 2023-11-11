@@ -20,7 +20,7 @@ client.once("ready", () => {
     console.log("  Lion's Project™ - Loading files... ");
     console.log("  Lion's Project™ - Loaded! ");
     console.log("  Lion's Project™ - Bot have been successfully enabled! ");
-    console.log(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+    console.log("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ");
     client.user.setActivity("🦁 Lion's Project", {
       type: ActivityType.Listening,
     });
