@@ -1,3 +1,4 @@
+const {} = require("discord.js")
 const dotenv = require('dotenv');
 const commandRegister = require('./commandRegister.js');
 const commands = require('./commands.js');

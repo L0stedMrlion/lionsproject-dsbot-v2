@@ -1,5 +1,7 @@
 const dotenv = require('dotenv');
-const filesLoader = require('./filesLoader.js');
+const commandRegister = require('./commandRegister.js');
+const commands = require('./commands.js');
+const pingInteraction = require('./pingInteraction.js');
 const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
 dotenv.config();
 
