@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-const loader = require('./filesLoader.js');
+const filesLoader = require('./filesLoader.js');
 const { Client, GatewayIntentBits, ActivityType } = require("discord.js");
 dotenv.config();
 
