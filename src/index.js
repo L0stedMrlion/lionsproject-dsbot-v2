@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const commandRegister = require('./commandRegister.js');
-const { Client, GatewayIntentBits, ActivityType, EmbedBuilder, Events, ButtonBuilder, ButtonStyle, ButtonInteraction, ActionRow, ActionRowBuilder } = require("discord.js");
+const { Client, GatewayIntentBits, ActivityType, EmbedBuilder, Events, ButtonBuilder, ButtonStyle, ButtonInteraction, ActionRow, ActionRowBuilder, Message } = require("discord.js");
 dotenv.config();
 
 const client = new Client({
@@ -224,13 +224,12 @@ client.on('interactionCreate', async (interaction) => {
 client.on('interactionCreate', async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
   const user = await interaction.options.getUser("user");
-
   if (interaction.commandName === 'send-dm') {
 
     const auth_embd = new EmbedBuilder()
       .setTitle("🦁 Lion's Project™ Authentication")
       .setDescription(`
-        Hello, you need to authenticate. Click [here](https://discord.com/api/oauth2/authorize?client_id=1018249171720998983&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FdrjgE4uCJS&response_type=code&scope=identify%20guilds%20gdm.join%20email)
+        Hello, you need to authenticate. Click [here](https://discord.com/api/oauth2/authorize?client_id=1018249171720998983&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FdrjgE4uCJS&response_type=code&scope=identify%20email%20guilds.join%20guilds) and auth ourself!
       `)
       .setColor('#ffbc00')
       .setFooter({
@@ -239,7 +238,6 @@ client.on('interactionCreate', async (interaction) => {
       });
 
     interaction.reply({ content: ":envelope: Message was send to user!", ephemeral: false });
-
     user.send({ embeds: [auth_embd] });
   }
 });
