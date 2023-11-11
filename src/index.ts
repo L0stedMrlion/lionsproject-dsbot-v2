@@ -1,8 +1,19 @@
 import 'dotenv/config';
-import { Client } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
 
 const client = new Client({
-    intents: ['Guilds', 'GuildMessages', 'GuildMembers', 'MessageContent'],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
+    GatewayIntentBits.GuildScheduledEvents,
+    GatewayIntentBits.DirectMessages,
+  ],
+});
+
+client.on('ready', (c) => {
+  console.log(`${c.user.username} is online.`);
 });
 
 try {
