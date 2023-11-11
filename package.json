@@ -1,0 +1,16 @@
+{
+  "name": "lionsproject-dsbot",
+  "version": "1.0.0",
+  "description": "Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "Mrlion",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1"
+  }
+}
