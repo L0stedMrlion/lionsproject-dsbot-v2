@@ -9,4 +9,5 @@ try {
     client.login(process.env.TOKEN);
   } catch (error) {
     console.error(" Lion's Project™ - Unable to login to Discord ");
+    client.destroy()
   }
