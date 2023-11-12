@@ -13,13 +13,13 @@ const client = new Client({
 });
 
 client.once('ready', (c) => {
-  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
   console.log("  Lion’s Project™ - LionBot - ", process.env.BOT_VERSION);
   console.log("  Lion's Project™ - Loading files... ");
   console.log("  Lion's Project™ - Loaded! ");
   console.log("  Lion's Project™ - Bot have been successfully enabled! ");
   console.log("  Lion's Project™ - LionBot was successfully started!  ");
-  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
   });
 
 try {
