@@ -28,6 +28,10 @@ Discord bot for our project named 🦁 Lion's Project! This bot is for utilities
 
 `npm install dotenv` - dotenv
 
+`npm install typescript` - typescript
+
+`npm install tsc @types/nodes` - types nodes
+
 ## 📷 Screenshots
 
 ![image](https://github.com/L0stedMrlion/lionsproject-dsbot/assets/87368344/4e7f157c-5948-44c3-b44b-507c3fd1101b) 
