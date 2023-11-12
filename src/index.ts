@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import * as ping from "./commands/ping";
 import { Client, GatewayIntentBits } from 'discord.js';
 
 const client = new Client({
@@ -22,6 +23,11 @@ client.once('ready', (c) => {
   console.log("  Lion's Project™ - LionBot was successfully started!  ");
   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
   });
+
+export const commands = {
+  ping,
+};
+
 
 try {
     client.login(process.env.TOKEN);
