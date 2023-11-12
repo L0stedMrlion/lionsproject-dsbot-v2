@@ -5,13 +5,13 @@
   },
   "name": "lionsproject-dsbot",
   "description": "Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "RELEASE 2.0",
+  "main": "src/index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Mrlion, Lion's Project",
   "license": "ISC"
 }
