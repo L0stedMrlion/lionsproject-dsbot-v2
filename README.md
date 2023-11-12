@@ -2,24 +2,6 @@
 
 Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.
 
-## 🤗 Commands
-
-`/info` - gives basic info like version, author a more.
-
-`/status` - gives link to our status page
-
-`/ping` - ping and shows ping of you and bot
-
-`/dice` - give random number from 1 to 6
- 
-`/joke` - show you some very "quality" joke
-
-`/purge` - deletes some number of message; not older than 14 days
-
-`/authentication` - send message to PM and gives link to authentication with ds oauth2
-
-`More commands will be added in future` 
- 
 ## 📋 Extensions & Dependencies
 
 `Node.js v20 or lower` - I use the newest node.js, but you can use older igs?
