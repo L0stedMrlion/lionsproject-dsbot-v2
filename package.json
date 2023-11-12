@@ -1,22 +1,17 @@
 {
-  "name": "lionsproject-dsbot",
-  "version": "TS RELEASE 0.1 BETA",
-  "description": "Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.",
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node ."
-},
-  "keywords": [],
-  "author": "Mrlion",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1"
   },
-  "devDependencies": {
-    "@types/node": "^20.9.0",
-    "tsx": "^4.1.1"
-  }
+  "name": "lionsproject-dsbot",
+  "description": "Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
