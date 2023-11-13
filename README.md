@@ -1,6 +1,10 @@
 # 🦁 Lion's Project - Discord bot
 
-Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.
+Discord bot for our project named 🦁 Lion's Project! This bot is gonna be multi-purpose, because we need some bot to tell information.
+
+This is my first discord.js v14 bot I ever made. Im just begginer and Im trying to learn new things. I remaked this bot maybe like 3 times now and I need to make a final version of working bot. 
+
+Goodluck for me!
 
 ## 📋 Extensions & Dependencies
 
