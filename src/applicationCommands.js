@@ -5,8 +5,8 @@ dotenv.config();
 
 const commands = [
     {
-        name: 'info',
-        description: '🦁 Gives information about LionBot',
+        name: 'about',
+        description: '🦁 Gives some information about LionBot',
     },
 ];
 
