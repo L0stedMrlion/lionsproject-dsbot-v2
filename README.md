@@ -4,11 +4,19 @@ Discord bot for our project named 🦁 Lion's Project! This bot is for utilities
 
 ## 📋 Extensions & Dependencies
 
-`Node.js v20 or lower` - I use the newest node.js, but you can use older igs?
+`Node.js v20 or lower` - I use the newest node.js
 
 `npm install discord.js` - discord.js
 
 `npm install dotenv` - dotenv
+
+## ❓ Questions
+
+`Where do you host this bot?` - I host this bot on my vps, where I have pterodactyl panel with node.js 20 egg.
+
+`What version of discord.js are you using?` - Im using the newest version - discord.js v14
+
+`Do you have more questions?` - Send an PM on Discord, I will reply!
 
 ## 📷 Screenshots
 
