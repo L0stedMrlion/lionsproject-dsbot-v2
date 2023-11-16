@@ -1,16 +1,19 @@
+const { EmbedBuilder } = require("discord.js");
+
 module.exports = {
     name: 'status',
     description: '👀 Give link to our status page!',
-  
+
     callback: async (client, interaction) => {
-      await interaction.deferReply();
-  
-      const reply = await interaction.fetchReply();
-  
-      const ping = reply.createdTimestamp - interaction.createdTimestamp;
-  
-      interaction.editReply(
-        `Pong! Client ${ping}ms | Websocket: ${client.ws.ping}ms`
-      );
+        const statusPageLink = 'https://status.lionsproject.eu';
+
+        const Embed = new EmbedBuilder()
+            .setTitle('Check Our Status')
+            .setURL(statusPageLink)
+            .setDescription('Stay up-to-date on our service status with this handy link.')
+            .setColor('#0099ff')
+            .setFooter({ text: 'Always monitoring for any issues.' });
+
+        interaction.reply({ embeds: [Embed] });
     },
-  };
+};
