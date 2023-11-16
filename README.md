@@ -16,7 +16,7 @@ Goodluck for me!
 
 ## ❓ Questions
 
-`Where do you host this bot?` - I host this bot on my vps, where I have pterodactyl panel with node.js 20 egg.
+`Where do you host this bot?` - I host this bot on my vps, where I have pterodactyl panel with node.js 20 egg. U can find the egg for node.js (here)[https://github.com/parkervcp/eggs/tree/master/generic/nodejs].
 
 `What version of discord.js are you using?` - Im using the newest version - discord.js v14
 
