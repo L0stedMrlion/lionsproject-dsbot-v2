@@ -1,0 +1,2 @@
+Add more commands in future to src/commands/misc/somecommand.js
+Try make something with actionrow and buttons
