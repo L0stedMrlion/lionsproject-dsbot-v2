@@ -41,7 +41,7 @@ module.exports = async (client, interaction) => {
 
         if (!bot.permissions.has(permission)) {
           interaction.reply({
-            content: "I don't have enough permissions.",
+            content: "❌ I don't have enough permissions.",
             ephemeral: true,
           });
           return;
@@ -51,6 +51,6 @@ module.exports = async (client, interaction) => {
 
     await commandObject.callback(client, interaction);
   } catch (error) {
-    console.log(`There was an error running this command: ${error}`);
+    console.log(`❗There was an error running this command: ${error}`);
   }
 };
