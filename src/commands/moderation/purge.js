@@ -1,3 +1,5 @@
+// TODO Fix the error if the message are not 14 days old; it says only in console.log
+
 module.exports = {
     name: 'purge',
     description: '🧹 Purges a specified number of messages.',
