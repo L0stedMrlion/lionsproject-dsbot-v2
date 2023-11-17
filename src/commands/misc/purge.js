@@ -7,7 +7,7 @@ module.exports = {
             return interaction.reply('❌ You do not have the required permissions to use this command.');
           }
       
-          const messages = await interaction.channel.messages.fetch({ limit: 100 });
+          const messages = await interaction.channel.messages.fetch({ limit: 200 });
       
           const filteredMessages = messages.filter(message => Date.now() - message.createdTimestamp <= 1209600000);
       
