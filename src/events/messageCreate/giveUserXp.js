@@ -14,6 +14,7 @@ function getRandomXp(min, max) {
  * @param {Client} client
  * @param {Message} message
  */
+
 module.exports = async (client, message) => {
   if (!message.inGuild() || message.author.bot || cooldowns.has(message.author.id)) return;
 
