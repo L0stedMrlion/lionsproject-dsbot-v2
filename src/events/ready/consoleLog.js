@@ -1,8 +1,9 @@
 require('dotenv').config();
 const { ActivityType } = require('discord.js');
+const { bot_version } = require('../../../config.json');
 
 module.exports = (client) => {
-  console.log(`🦁 LionBot -`, process.env.BOT_VERSION)
+  console.log(`🦁 LionBot - ${bot_version}`,)
   console.log(`🦁 LionBot starting bot...`);
   console.log(`🦁 LionBot is online.`);
   client.user.setPresence({
