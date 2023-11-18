@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
-const config = require("../../../links.json");
+const { statuspage } = require('../../../links.json');
 
 module.exports = {
     name: 'status',
@@ -8,7 +8,7 @@ module.exports = {
   callback: async (client, interaction) => {
         const status_embed = new EmbedBuilder()
           .setTitle('📊 Status page')
-          .setDescription(`All statuses you can find here on your ${links.statuspage}`)
+          .setDescription(`All statuses you can find here on your ${statuspage}`)
           .setColor('#64a338')
           .setFooter({
             text: "🦁 Lion's Project™ © 2023",
