@@ -1,3 +1,9 @@
 config.json
 minecraft.json
 links.json
+.gitignore
+.env
+README.md
+.prettierrc
+/node_modules
+/.vscode
