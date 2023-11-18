@@ -13,7 +13,8 @@ module.exports = {
    *
    * @param {Client} client
    * @param {Interaction} interaction
-   */
+  */
+
   callback: async (client, interaction) => {
     if (!interaction.inGuild()) {
       interaction.reply('You can only run this command inside a server.');
