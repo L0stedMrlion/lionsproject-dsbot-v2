@@ -3,6 +3,7 @@
 module.exports = {
     name: 'purge',
     description: '🧹 Purges a specified number of messages.',
+  devOnly: true,
   
     callback: async (client, interaction) => {
       if (!interaction.member.permissions.has('MANAGE_MESSAGES')) {
