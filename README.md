@@ -14,6 +14,8 @@ Goodluck for me!
 
 `npm install dotenv` - dotenv
 
+`npm install mongoose` - Support for mongodb
+
 ## ❓ Questions
 
 `Where do you host this bot?` - I host this bot on my vps, where I have pterodactyl panel with node.js 20 egg.
