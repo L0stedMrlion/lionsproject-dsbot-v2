@@ -4,9 +4,7 @@ module.exports = {
     name: 'status',
     description: '📊 Sends link to our status page!',
 
-    callback: async (client, interaction) => {
-        const statusPageLink = 'https://status.lionsproject.eu';
-
+  callback: async (client, interaction) => {
         const status_embed = new EmbedBuilder()
           .setTitle('📊 Status page')
           .setDescription("All statuses you can find here on your [Status page](https://status.lionsproject.eu)")
