@@ -35,7 +35,7 @@ module.exports = async (client, message) => {
         level.level += 1;
 
         const levelup = new EmbedBuilder()
-          .setTitle('🆙 Level')
+          .setTitle('🆙  Level')
           .setDescription(`${message.member} you have leveled up to **level ${level.level}**.`)
           .setColor('#0085ff')
           .setFooter({
@@ -43,7 +43,7 @@ module.exports = async (client, message) => {
             iconURL: 'https://cdn.discordapp.com/attachments/1092013099168583781/1170441421900218448/lionsproject_logo.png?ex=65590d84&is=65469884&hm=e321b014c27e21524e8efe2b72823971d9dfe8ffff1fedcced5b65391c4816b3',
           });
 
-        interaction.reply({ embeds: [levelup] });
+        message.channel.send({ embeds: [levelup] });
       }
 
       await level.save().catch((e) => {
@@ -53,7 +53,7 @@ module.exports = async (client, message) => {
       cooldowns.add(message.author.id);
       setTimeout(() => {
         cooldowns.delete(message.author.id);
-      }, 60000);
+      }, 3);
     }
 
     // if (!level)
@@ -69,9 +69,9 @@ module.exports = async (client, message) => {
       cooldowns.add(message.author.id);
       setTimeout(() => {
         cooldowns.delete(message.author.id);
-      }, 60000);
+      }, 3);
     }
   } catch (error) {
-    console.log(`Error giving xp: ${error}`);
+    console.log(`❗ Error giving xp: ${error}`);
   }
 };
