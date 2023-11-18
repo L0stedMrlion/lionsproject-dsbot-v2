@@ -18,8 +18,9 @@ const client = new Client({
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('🌿 Connected to Database.');
     eventHandler(client);
+
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.log(`❗ There was an error: ${error}`);
   }
 })();
 
