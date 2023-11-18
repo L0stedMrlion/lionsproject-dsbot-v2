@@ -12,14 +12,11 @@ const client = new Client({
   ],
 });
 
-eventHandler(client);
-
 (async () => {
   try {
     mongoose.set('strictQuery', false);
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('🌿 Connected to MongoDB.');
-
     eventHandler(client);
   } catch (error) {
     console.log(`Error: ${error}`);
