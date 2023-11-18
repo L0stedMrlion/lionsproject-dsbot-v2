@@ -1,4 +1,4 @@
-const config = require("../../../config.json");
+const config = require("../../../minecraft.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
@@ -7,8 +7,8 @@ module.exports = {
 
   callback: async (client, interaction) => {
     const ip_embd = new EmbedBuilder()
-      .setTitle("🦁 LionBot")
-      .setDescription(`IP adress for our server is **${config.minecraft}**`)
+      .setTitle("🎮 Minecraft server")
+      .setDescription(`IP adress for our server is **${config.minecraft_domain}**`)
       .setColor("#00AA00")
       .setFooter({
         text: "🦁 Lion's Project™ © 2023",
