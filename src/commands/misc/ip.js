@@ -4,6 +4,7 @@ const { EmbedBuilder } = require("discord.js");
 module.exports = {
   name: "ip",
   description: "😁 Send you IP adress for our Minecraft server!",
+  devOnly: true,
 
   callback: async (client, interaction) => {
     const ip_embd = new EmbedBuilder()
