@@ -59,8 +59,8 @@ module.exports = {
       .setLevel(fetchedLevel.level)
       .setCurrentXP(fetchedLevel.xp)
       .setRequiredXP(calculateLevelXp(fetchedLevel.level))
-      .setProgressBar('#FFC300', 'COLOR')
-      .setUsername(targetUserObj.user.username)
+      .setProgressBar("#FFC300", "COLOR")
+      .setUsername(targetUserObj.user.displayName)
 
     const data = await rank.build();
     const attachment = new AttachmentBuilder(data);
