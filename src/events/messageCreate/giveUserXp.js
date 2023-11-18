@@ -53,7 +53,7 @@ module.exports = async (client, message) => {
       cooldowns.add(message.author.id);
       setTimeout(() => {
         cooldowns.delete(message.author.id);
-      }, 3);
+      }, 30000);
     }
 
     // if (!level)
@@ -69,7 +69,7 @@ module.exports = async (client, message) => {
       cooldowns.add(message.author.id);
       setTimeout(() => {
         cooldowns.delete(message.author.id);
-      }, 3);
+      }, 30000);
     }
   } catch (error) {
     console.log(`❗ Error giving xp: ${error}`);
