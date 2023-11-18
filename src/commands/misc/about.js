@@ -1,5 +1,5 @@
-const config = require("../../../config.json");
-const config = require("../../../links.json");
+const { developer, bot_version } = require("../../../config.json");
+const { discord } = require("../../../links.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
