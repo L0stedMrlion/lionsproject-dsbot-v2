@@ -6,7 +6,7 @@
   },
   "name": "lionsproject-dsbot",
   "description": "Discord bot for our project named 🦁 Lion's Project! This bot is for utilities like ban, purge and these things.",
-  "version": "RELEASE 2.0",
+  "version": "RELEASE 2.1",
   "main": "src/index.js",
   "scripts": {
     "start": "node ."
