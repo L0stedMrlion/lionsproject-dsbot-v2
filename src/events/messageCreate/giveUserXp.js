@@ -1,4 +1,4 @@
-const { Client, Message } = require('discord.js');
+const { Client, Message, EmbedBuilder } = require('discord.js');
 const calculateLevelXp = require('../../utils/calculateLevelXp');
 const Level = require('../../models/Level');
 const cooldowns = new Set();
@@ -34,7 +34,16 @@ module.exports = async (client, message) => {
         level.xp = 0;
         level.level += 1;
 
-        message.channel.send(`${message.member} you have leveled up to **level ${level.level}**.`);
+        const levelup = new EmbedBuilder()
+          .setTitle('🆙 Level')
+          .setDescription(`${message.member} you have leveled up to **level ${level.level}**.`)
+          .setColor('#0085ff')
+          .setFooter({
+            text: "🦁 Lion's Project™ © 2023",
+            iconURL: 'https://cdn.discordapp.com/attachments/1092013099168583781/1170441421900218448/lionsproject_logo.png?ex=65590d84&is=65469884&hm=e321b014c27e21524e8efe2b72823971d9dfe8ffff1fedcced5b65391c4816b3',
+          });
+
+        interaction.reply({ embeds: [levelup] });
       }
 
       await level.save().catch((e) => {
