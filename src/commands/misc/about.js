@@ -1,4 +1,5 @@
 const config = require("../../../config.json");
+const config = require("../../../links.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
 
         🔧  Developer **${config.developer}**
         📋  Version **${config.bot_version}**
-        👨‍💻 Discord server [Discord](https://discord.gg/BYHTyMCJkh)
+        👨‍💻 Discord server ${links.discord}
 
       `)
       .setColor('#ffbc00')
