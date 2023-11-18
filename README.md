@@ -14,7 +14,9 @@ Goodluck for me!
 
 `npm install dotenv` - dotenv
 
-`npm install mongoose` - Support for mongodb
+`npm install mongoose` - support for mongodb
+
+`npm install canvacord` - for leveling system cards
 
 ## ❓ Questions
 
