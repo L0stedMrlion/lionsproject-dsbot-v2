@@ -22,7 +22,7 @@ module.exports = {
 
     await interaction.deferReply();
 
-    const mentionedUserId = interaction.options.get('target-user')?.value;
+    const mentionedUserId = interaction.options.get('user')?.value;
     const targetUserId = mentionedUserId || interaction.member.id;
     const targetUserObj = await interaction.guild.members.fetch(targetUserId);
 
@@ -62,7 +62,6 @@ module.exports = {
       .setRequiredXP(calculateLevelXp(fetchedLevel.level))
       .setProgressBar('#FFC300', 'COLOR')
       .setUsername(targetUserObj.user.username)
-      .setDiscriminator(targetUserObj.user.discriminator);
 
     const data = await rank.build();
     const attachment = new AttachmentBuilder(data);
@@ -74,7 +73,7 @@ module.exports = {
   devOnly: true,
   options: [
     {
-      name: 'target-user',
+      name: 'user',
       description: 'The user whose level you want to see.',
       type: ApplicationCommandOptionType.Mentionable,
     },
