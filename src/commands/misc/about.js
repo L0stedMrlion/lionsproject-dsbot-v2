@@ -1,4 +1,4 @@
-const dotenv = require('dotenv');
+const config = require("../../../config.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
       .setDescription(`
         Hello, I'm LionBot! 🦁
 
-        🔧  Developer **${process.env.AUTHOR}**
-        📋  Version **${process.env.BOT_VERSION}**
+        🔧  Developer **${config.developer}**
+        📋  Version **${config.bot_version}**
         👨‍💻 Discord server [Discord](https://discord.gg/BYHTyMCJkh)
 
       `)
