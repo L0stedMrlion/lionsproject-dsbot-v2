@@ -3,12 +3,12 @@ const { discord } = require("../../../links.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
-    name: 'about',
-    description: '🤖 Send information about bot.',
+  name: 'about',
+  description: '🤖 Send information about bot.',
 
-    callback: async (client, interaction) => {
+  callback: async (client, interaction) => {
 
-      const info_embd = new EmbedBuilder()
+    const info_embd = new EmbedBuilder()
       .setTitle('🦁 LionBot')
       .setDescription(`
         Hello, I'm LionBot! 🦁
@@ -26,5 +26,5 @@ module.exports = {
       });
 
     interaction.reply({ embeds: [info_embd] });
-    },
+  },
 };
