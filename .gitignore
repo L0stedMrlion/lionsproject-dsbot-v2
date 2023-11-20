@@ -1,3 +1,2 @@
 .env
-config.json
-src/todo.txt
+node_modules

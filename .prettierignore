@@ -5,4 +5,6 @@ links.json
 .env
 README.md
 .prettierrc
-/node_modules
+/node_modules***
+package-lock.json
+package.json
