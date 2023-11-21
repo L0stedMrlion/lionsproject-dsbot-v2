@@ -12,11 +12,11 @@ Goodluck for me!
 
 `npm install discord.js` - discord.js
 
-`npm install dotenv` - dotenv
+`npm install dotenv` - dotenv // .env
 
-`npm install mongoose` - support for mongodb
+`npm install mongoose` - support for mongodb // connection in index.js
 
-`npm install canvacord` - for leveling system cards
+`npm install canvacord` - for leveling system cards // sometimes not working?
 
 ## ❓ Questions
 
