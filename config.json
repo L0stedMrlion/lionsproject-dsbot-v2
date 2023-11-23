@@ -1,7 +1,7 @@
 {
-    "testServer": "1003239269994876938",
-    "clientId": "1018249171720998983",
-    "devs": "710549603216261141",
+    "devServer": "1003239269994876938",
+    "clientID": "1018249171720998983",
+    "developer_ID": "710549603216261141",
     "developer": "Mrlion",
     "bot_version": "RELEASE 2.1.3"
 }
