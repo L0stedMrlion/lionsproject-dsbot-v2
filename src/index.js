@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Client, IntentsBitField } = require('discord.js');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const eventHandler = require('./handlers/eventHandler');
 
 const client = new Client({
