@@ -12,16 +12,17 @@ const client = new Client({
   ],
 });
 
-(async () => {
-  try {
-    mongoose.set('strictQuery', false);
-    await mongoose.connect(process.env.MONGODB);
-    console.log('🌿 Connected to Database.');
-    eventHandler(client);
+// (async () => {
+// try {
+// mongoose.set('strictQuery', false);
+//    await mongoose.connect(process.env.MONGODB);
+//  console.log('🌿 Connected to Database.');
+// eventHandler(client);
 
-  } catch (error) {
-    console.log(`❗ There was an error: ${error}`);
-  }
-})();
+// } catch (error) {
+// console.log(`❗ There was an error: ${error}`);
+// }
+//})();
+//
 
 client.login(process.env.TOKEN);

@@ -1,4 +1,4 @@
-const { devs, testServer } = require('../../../config.json');
+const { devs, devServer } = require('../../../config.json');
 const getLocalCommands = require('../../utils/getLocalCommands');
 
 module.exports = async (client, interaction) => {
@@ -8,7 +8,7 @@ module.exports = async (client, interaction) => {
 
   try {
     const commandObject = localCommands.find(
-      (cmd) => cmd.name === interaction.commandName
+      cmd => cmd.name === interaction.commandName,
     );
 
     if (!commandObject) return;
